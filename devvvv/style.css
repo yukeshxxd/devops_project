@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.team-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.btn-outline-dark {
+    border-radius: 20px;
+}

@@ -1,0 +1,225 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2818
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red232\green235\blue20;\red192\green192\blue192;
+\red111\green111\blue111;\red64\green11\blue217;\red46\green174\blue187;\red47\green180\blue29;\red47\green231\blue26;
+}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c92620\c92472\c8348;\cssrgb\c79890\c79890\c79890;
+\cssrgb\c51167\c51167\c51167;\cssrgb\c32309\c18666\c88229;\cssrgb\c20199\c73241\c78251;\cssrgb\c20241\c73898\c14950;\cssrgb\c17866\c90514\c12813;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Sat Apr  5 08:35:28 on console\
+adithyan@Adithyans-MacBook-Air ~ % pwsh\
+PowerShell 7.5.0\
+PS /Users/adithyan> \cf3 minikube\cf2  \cf4 start\cf2 \
+\uc0\u55357 \u56836   minikube v1.35.0 on Darwin 15.0.1\
+\uc0\u10024   Using the docker driver based on existing profile\
+\
+\uc0\u55357 \u56483   Exiting due to PROVIDER_DOCKER_NOT_RUNNING: "docker version --format <no value>-<no value>:<no value>" exit status 1: Cannot connect to the Docker daemon at unix:///Users/adithyan/.docker/run/docker.sock. Is the docker daemon running?\
+\uc0\u55357 \u56481   Suggestion: Start the Docker service\
+\uc0\u55357 \u56536   Documentation: https://minikube.sigs.k8s.io/docs/drivers/docker/\
+\
+PS /Users/adithyan> \cf3 docker\cf2  \cf5 --version\cf2 \
+Docker version 27.4.0, build bde2b89\
+PS /Users/adithyan> \cf3 which\cf2  \cf4 docker\cf2 \
+/usr/local/bin/docker\
+PS /Users/adithyan> \cf3 sudo\cf2  \cf4 nano\cf2  \cf4 /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist\cf2                                     \
+Password:\
+PS /Users/adithyan> \cf3 sudo\cf2  \cf4 launchctl\cf2  \cf4 unload\cf2  \cf4 /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist\cf2 \
+Unload failed: 5: Input/output error\
+Try running `launchctl bootout` as root for richer errors.\
+PS /Users/adithyan> \cf3 sudo\cf2  \cf4 launchctl\cf2  \cf4 load\cf2  \cf4 /Library/LaunchDaemons/homebrew.mxcl.jenkins.plist\cf2 \
+Load failed: 5: Input/output error\
+Try running `launchctl bootstrap` as root for richer errors.\
+PS /Users/adithyan> \cf3 brew\cf2  \cf4 services\cf2  \cf4 restart\cf2  \cf4 jenkins-lts\cf2 \
+Stopping `jenkins-lts`... (might take a while)\
+\cf6 ==>\cf2  
+\f1\b Successfully stopped `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+\cf6 ==>\cf2  
+\f1\b Successfully started `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+PS /Users/adithyan> \cf3 echo\cf2  \cf7 "Testing Docker..."\cf2 \
+Testing Docker...\
+PS /Users/adithyan> \cf3 docker\cf2  \cf5 --version\cf2 \
+Docker version 27.4.0, build bde2b89\
+PS /Users/adithyan> \cf3 brew\cf2  \cf4 services\cf2  \cf4 stop\cf2  \cf4 jenkins-lts\cf2    \
+\
+Stopping `jenkins-lts`... (might take a while)\
+\cf6 ==>\cf2  
+\f1\b Successfully stopped `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+PS /Users/adithyan> \cf3 jenkins-lts\cf2             \
+Running from: /usr/local/Cellar/jenkins-lts/2.492.3/libexec/jenkins.war\
+webroot: /Users/adithyan/.jenkins/war\
+2025-04-05 03:19:28.115+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file\
+2025-04-05 03:19:28.226+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath\
+2025-04-05 03:19:28.334+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.0.17; built: 2025-03-03T13:15:05.903Z; git: 14d19c268e4cb09afc312b5255a4cbb7a95c5cb6; jvm 17.0.14+0\
+2025-04-05 03:19:29.128+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet\
+2025-04-05 03:19:29.214+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0\
+2025-04-05 03:19:30.025+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /Users/adithyan/.jenkins found at: $user.home/.jenkins\
+2025-04-05 03:19:31.019+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@2e8ab815\{Jenkins v2.492.3,/,b=file:///Users/adithyan/.jenkins/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@67af833b\{STARTED\}\}\
+2025-04-05 03:19:31.046+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started ServerConnector@62da83ed\{HTTP/1.1, (http/1.1)\}\{0.0.0.0:8080\}\
+2025-04-05 03:19:31.109+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@33afa13b\{STARTING\}[12.0.17,sto=0] @4078ms\
+2025-04-05 03:19:31.110+0000 [id=26]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled\
+2025-04-05 03:19:31.302+0000 [id=25]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.492.3\
+2025-04-05 03:19:31.436+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization\
+2025-04-05 03:19:31.702+0000 [id=33]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins\
+2025-04-05 03:19:37.245+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins\
+2025-04-05 03:19:37.283+0000 [id=38]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins\
+2025-04-05 03:19:37.306+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions\
+2025-04-05 03:19:37.890+0000 [id=34]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set\
+2025-04-05 03:19:38.221+0000 [id=34]	WARNING	o.j.p.d.DockerBuilder$DescriptorImpl#<init>: Docker URL is not set, docker client won't be initialized\
+2025-04-05 03:19:39.239+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded\
+2025-04-05 03:19:39.322+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted\
+2025-04-05 03:19:39.665+0000 [id=36]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs\
+2025-04-05 03:19:39.686+0000 [id=35]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated\
+2025-04-05 03:19:39.737+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization\
+2025-04-05 03:19:39.824+0000 [id=25]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running\
+docker ps\
+^C2025-04-05 03:20:51.984+0000 [id=27]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty\
+2025-04-05 03:20:51.985+0000 [id=27]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@33afa13b\{STOPPING\}[12.0.17,sto=0]\
+2025-04-05 03:20:51.995+0000 [id=27]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped ServerConnector@62da83ed\{HTTP/1.1, (http/1.1)\}\{0.0.0.0:8080\}\
+2025-04-05 03:20:52.001+0000 [id=27]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins\
+2025-04-05 03:20:52.017+0000 [id=27]	INFO	jenkins.model.Jenkins$17#onAttained: Started termination\
+2025-04-05 03:20:52.019+0000 [id=27]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending\
+2025-04-05 03:20:52.044+0000 [id=27]	INFO	jenkins.model.Jenkins$17#onAttained: Completed termination\
+2025-04-05 03:20:52.044+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection\
+2025-04-05 03:20:52.051+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager\
+2025-04-05 03:20:52.073+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue\
+2025-04-05 03:20:52.113+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion\
+2025-04-05 03:20:52.114+0000 [id=27]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped\
+PS /Users/adithyan> \cf3 docker\cf2  \cf4 ps\cf2        \
+Cannot connect to the Docker daemon at unix:///Users/adithyan/.docker/run/docker.sock. Is the docker daemon running?\
+PS /Users/adithyan> \cf3 docker\cf2  \cf4 ps\cf2 \
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES\
+PS /Users/adithyan> \cf3 jenkins-lts\cf2 \
+Running from: /usr/local/Cellar/jenkins-lts/2.492.3/libexec/jenkins.war\
+webroot: /Users/adithyan/.jenkins/war\
+2025-04-05 03:22:28.037+0000 [id=1]	INFO	winstone.Logger#logInternal: Beginning extraction from war file\
+2025-04-05 03:22:28.159+0000 [id=1]	WARNING	o.e.j.ee9.nested.ContextHandler#setContextPath: Empty contextPath\
+2025-04-05 03:22:28.290+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: jetty-12.0.17; built: 2025-03-03T13:15:05.903Z; git: 14d19c268e4cb09afc312b5255a4cbb7a95c5cb6; jvm 17.0.14+0\
+2025-04-05 03:22:29.236+0000 [id=1]	INFO	o.e.j.e.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.ee9.jsp.JettyJspServlet\
+2025-04-05 03:22:29.330+0000 [id=1]	INFO	o.e.j.s.DefaultSessionIdManager#doStart: Session workerName=node0\
+2025-04-05 03:22:30.220+0000 [id=1]	INFO	hudson.WebAppMain#contextInitialized: Jenkins home directory: /Users/adithyan/.jenkins found at: $user.home/.jenkins\
+2025-04-05 03:22:30.995+0000 [id=1]	INFO	o.e.j.s.handler.ContextHandler#doStart: Started oeje9n.ContextHandler$CoreContextHandler@2e8ab815\{Jenkins v2.492.3,/,b=file:///Users/adithyan/.jenkins/war/,a=AVAILABLE,h=oeje9n.ContextHandler$CoreContextHandler$CoreToNestedHandler@67af833b\{STARTED\}\}\
+2025-04-05 03:22:31.034+0000 [id=1]	INFO	o.e.j.server.AbstractConnector#doStart: Started ServerConnector@62da83ed\{HTTP/1.1, (http/1.1)\}\{0.0.0.0:8080\}\
+2025-04-05 03:22:31.076+0000 [id=1]	INFO	org.eclipse.jetty.server.Server#doStart: Started oejs.Server@33afa13b\{STARTING\}[12.0.17,sto=0] @4146ms\
+2025-04-05 03:22:31.079+0000 [id=26]	INFO	winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled\
+2025-04-05 03:22:31.289+0000 [id=25]	INFO	jenkins.model.Jenkins#<init>: Starting version 2.492.3\
+2025-04-05 03:22:31.454+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Started initialization\
+2025-04-05 03:22:31.735+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Listed all plugins\
+2025-04-05 03:22:39.615+0000 [id=31]	INFO	jenkins.InitReactorRunner$1#onAttained: Prepared all plugins\
+2025-04-05 03:22:39.648+0000 [id=36]	INFO	jenkins.InitReactorRunner$1#onAttained: Started all plugins\
+2025-04-05 03:22:39.664+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Augmented all extensions\
+2025-04-05 03:22:40.298+0000 [id=37]	INFO	h.p.b.g.GlobalTimeOutConfiguration#load: global timeout not set\
+2025-04-05 03:22:40.831+0000 [id=37]	WARNING	o.j.p.d.DockerBuilder$DescriptorImpl#<init>: Docker URL is not set, docker client won't be initialized\
+2025-04-05 03:22:43.026+0000 [id=33]	INFO	jenkins.InitReactorRunner$1#onAttained: System config loaded\
+2025-04-05 03:22:43.111+0000 [id=38]	INFO	jenkins.InitReactorRunner$1#onAttained: System config adapted\
+2025-04-05 03:22:43.246+0000 [id=35]	INFO	jenkins.InitReactorRunner$1#onAttained: Loaded all jobs\
+2025-04-05 03:22:43.282+0000 [id=32]	INFO	jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated\
+2025-04-05 03:22:43.349+0000 [id=33]	INFO	jenkins.InitReactorRunner$1#onAttained: Completed initialization\
+2025-04-05 03:22:43.448+0000 [id=25]	INFO	hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running\
+^C2025-04-05 03:39:48.297+0000 [id=27]	INFO	winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty\
+2025-04-05 03:39:48.299+0000 [id=27]	INFO	org.eclipse.jetty.server.Server#doStop: Stopped oejs.Server@33afa13b\{STOPPING\}[12.0.17,sto=0]\
+2025-04-05 03:39:48.310+0000 [id=27]	INFO	o.e.j.server.AbstractConnector#doStop: Stopped ServerConnector@62da83ed\{HTTP/1.1, (http/1.1)\}\{0.0.0.0:8080\}\
+2025-04-05 03:39:48.321+0000 [id=27]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Stopping Jenkins\
+2025-04-05 03:39:48.343+0000 [id=27]	INFO	jenkins.model.Jenkins$17#onAttained: Started termination\
+2025-04-05 03:39:48.363+0000 [id=27]	INFO	h.p.b.global.Lifecycle#shutdown: Shutdown complete - Global TimeOut ScheduledExecutorService had 0 tasks pending\
+2025-04-05 03:39:48.365+0000 [id=27]	INFO	jenkins.model.Jenkins$17#onAttained: Completed termination\
+2025-04-05 03:39:48.365+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpDisconnectComputers: Starting node disconnection\
+2025-04-05 03:39:48.370+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpShutdownPluginManager: Stopping plugin manager\
+2025-04-05 03:39:48.399+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpPersistQueue: Persisting build queue\
+2025-04-05 03:39:48.438+0000 [id=27]	INFO	jenkins.model.Jenkins#_cleanUpAwaitDisconnects: Waiting for node disconnection completion\
+2025-04-05 03:39:48.438+0000 [id=27]	INFO	hudson.lifecycle.Lifecycle#onStatusUpdate: Jenkins stopped\
+PS /Users/adithyan> \cf3 cd\cf2  \cf4 /Users/adithyan/Desktop/devvvv\cf2     \
+PS /Users/adithyan/Desktop/devvvv> \cf3 npm\cf2  \cf4 init\cf2  \cf5 -y\cf2   \
+Wrote to /Users/adithyan/Desktop/devvvv/package.json:\
+\
+\{\
+  "name": "devvvv",\
+  "version": "1.0.0",\
+  "main": "server.js",\
+  "dependencies": \{\
+    "debug": "^2.6.9",\
+    "ms": "^2.0.0"\
+  \},\
+  "devDependencies": \{\},\
+  "scripts": \{\
+    "test": "echo \\"Error: no test specified\\" && exit 1",\
+    "start": "node server.js"\
+  \},\
+  "keywords": [],\
+  "author": "",\
+  "license": "ISC",\
+  "description": ""\
+\}\
+\
+\
+\
+PS /Users/adithyan/Desktop/devvvv> \cf3 npm\cf2  \cf4 install\cf2 \
+\
+up to date, audited 3 packages in 1s\
+\
+found 
+\f1\b \cf8 0
+\f0\b0 \cf2  vulnerabilities\
+PS /Users/adithyan/Desktop/devvvv> \cf3 minikube\cf2  \cf4 start\cf2 \
+\uc0\u55357 \u56836   minikube v1.35.0 on Darwin 15.0.1\
+\uc0\u10024   Using the docker driver based on existing profile\
+\uc0\u55357 \u56397   Starting "minikube" primary control-plane node in "minikube" cluster\
+\uc0\u55357 \u56988   Pulling base image v0.0.46 ...\
+\uc0\u55357 \u56580   Restarting existing docker container for "minikube" ...\
+\uc0\u55357 \u56371   Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...\
+\uc0\u55357 \u56590   Verifying Kubernetes components...\
+    \uc0\u9642  Using image gcr.io/k8s-minikube/storage-provisioner:v5\
+\uc0\u55356 \u57119   Enabled addons: storage-provisioner, default-storageclass\
+\
+\uc0\u10071   /usr/local/bin/kubectl is version 1.30.5, which may have incompatibilities with Kubernetes 1.32.0.\
+    \uc0\u9642  Want kubectl v1.32.0? Try 'minikube kubectl -- get pods -A'\
+\uc0\u55356 \u57284   Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default\
+PS /Users/adithyan/Desktop/devvvv> \cf3 brew\cf2  \cf4 services\cf2  \cf4 start\cf2  \cf4 jenkins-lts\cf2 \
+\cf6 ==>\cf2  
+\f1\b Successfully started `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+PS /Users/adithyan/Desktop/devvvv> \cf3 mkdir\cf2  \cf5 -p\cf2  \cf4 ~/.minikube\cf2  \cf4 ~/.kube\cf2 \
+PS /Users/adithyan/Desktop/devvvv> \cf3 minikube\cf2  \cf4 start\cf2  \cf5 --driver=docker\cf2 \
+\uc0\u55357 \u56836   minikube v1.35.0 on Darwin 15.0.1\
+\uc0\u10024   Using the docker driver based on existing profile\
+\uc0\u55357 \u56397   Starting "minikube" primary control-plane node in "minikube" cluster\
+\uc0\u55357 \u56988   Pulling base image v0.0.46 ...\
+\uc0\u55356 \u57283   Updating the running docker "minikube" container ...\
+\uc0\u55357 \u56371   Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...\
+\uc0\u55357 \u56590   Verifying Kubernetes components...\
+    \uc0\u9642  Using image gcr.io/k8s-minikube/storage-provisioner:v5\
+\uc0\u55356 \u57119   Enabled addons: storage-provisioner, default-storageclass\
+\
+\uc0\u10071   /usr/local/bin/kubectl is version 1.30.5, which may have incompatibilities with Kubernetes 1.32.0.\
+    \uc0\u9642  Want kubectl v1.32.0? Try 'minikube kubectl -- get pods -A'\
+\uc0\u55356 \u57284   Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default\
+PS /Users/adithyan/Desktop/devvvv> \cf3 kubectl\cf2  \cf4 get\cf2  \cf4 nodes\cf2 \
+NAME       STATUS   ROLES           AGE   VERSION\
+minikube   Ready    control-plane   55d   v1.32.0\
+PS /Users/adithyan/Desktop/devvvv> \cf3 cat\cf2  \cf4 /etc/systemd/system/docker.service.d/http-proxy.conf\cf2 \
+cat: /etc/systemd/system/docker.service.d/http-proxy.conf: No such file or directory\
+PS /Users/adithyan/Desktop/devvvv> \cf3 echo\cf2  \cf9 $http_proxy\cf2         \
+PS /Users/adithyan/Desktop/devvvv> \cf3 echo\cf2  \cf9 $https_proxy\cf2 \
+PS /Users/adithyan/Desktop/devvvv> \cf3 echo\cf2  \cf9 $http_proxy\cf2  \
+PS /Users/adithyan/Desktop/devvvv> \cf3 docker\cf2  \cf4 info\cf2  \cf4 |\cf2  \cf3 grep\cf2  \cf5 -i\cf2  \cf4 proxy\cf2 \
+WARNING: daemon is not using the default seccomp profile\
+ HTTP Proxy: http.docker.internal:3128\
+ HTTPS Proxy: http.docker.internal:3128\
+ No Proxy: hubproxy.docker.internal\
+  hubproxy.docker.internal:5555\
+PS /Users/adithyan/Desktop/devvvv> \cf3 brew\cf2  \cf4 services\cf2  \cf4 restart\cf2  \cf4 jenkins-lts\cf2 \
+\
+Stopping `jenkins-lts`... (might take a while)\
+\cf6 ==>\cf2  
+\f1\b Successfully stopped `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+\cf6 ==>\cf2  
+\f1\b Successfully started `jenkins-lts` (label: homebrew.mxcl.jenkins-lts)
+\f0\b0 \
+PS /Users/adithyan/Desktop/devvvv> \
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chocolate Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-purple-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">The Chocolate Shop</h1>
+      <ul class="flex space-x-4">
+        <li><a href="home.html" class="hover:underline">Home</a></li>
+        <li><a href="about.html" class="hover:underline">About Us</a></li>
+        <li><a href="contactus.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-white">
+    <h2 class="text-4xl font-bold">The Finest Chocolates</h2>
+    <p class="text-gray-600 mt-2">Explore our wide range of chocolates.</p>
+    <a href="#" class="mt-4 inline-block bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700">Shop Now</a>
+  </section>
+
+  <!-- Chocolate Menu -->
+  <section class="container mx-auto py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Popular Chocolates</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Dark Chocolate Card -->
+      <div class="bg-white p-4 rounded-lg shadow">
+        <img src="https://t3.ftcdn.net/jpg/02/42/11/72/360_F_242117284_FyhQaHVNf76gqsNHNM54I0kTRxcC2Dl8.jpg" alt="Dark Chocolate" class="w-full h-48 object-cover rounded">
+        <h3 class="text-xl font-semibold mt-4">Dark Chocolate</h3>
+        <p class="text-gray-600">Rs.799/kg</p>
+        <button data-product="Dark Chocolate" data-price="799" class="buyBtn mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Buy Now</button>
+      </div>
+      <!-- Belgium Truffles Card -->
+      <div class="bg-white p-4 rounded-lg shadow">
+        <img src="https://media.istockphoto.com/id/911742664/photo/handmade-dark-chocolates-iii.jpg?s=612x612&w=0&k=20&c=M6O9YhcQSgE0fVuzaYYtp8-KF-aG8ltMj_sSefTGAb0=" alt="Belgium Truffles" class="w-full h-48 object-cover rounded">
+        <h3 class="text-xl font-semibold mt-4">Belgium Truffles</h3>
+        <p class="text-gray-600">Rs.1200/kg</p>
+        <button data-product="Belgium Truffles" data-price="1200" class="buyBtn mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Buy Now</button>
+      </div>
+      <!-- Kisses Chocolate Card -->
+      <div class="bg-white p-4 rounded-lg shadow">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxvcU_1mYf1Mm-yVF83rKpVfq1TTPjL4WrQ&s" alt="Kisses Chocolate" class="w-full h-48 object-cover rounded">
+        <h3 class="text-xl font-semibold mt-4">Kisses Chocolate</h3>
+        <p class="text-gray-600">Rs.1550/kg</p>
+        <button data-product="Kisses Chocolate" data-price="1550" class="buyBtn mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 p-6">
+      <h3 class="text-2xl font-bold mb-4">Payment Form</h3>
+      <form action="/order" method="POST" id="paymentForm" class="space-y-4">
+        <!-- Hidden fields for product data -->
+        <input type="hidden" name="productName" id="productName">
+        <input type="hidden" name="price" id="price">
+        <div>
+          <label for="customerName" class="block text-gray-700">Name</label>
+          <input type="text" id="customerName" name="customerName" required class="w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div>
+          <label for="customerEmail" class="block text-gray-700">Email</label>
+          <input type="email" id="customerEmail" name="customerEmail" required class="w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div>
+          <label for="paymentMethod" class="block text-gray-700">Payment Method</label>
+          <select id="paymentMethod" name="paymentMethod" required class="w-full border border-gray-300 p-2 rounded">
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Net Banking">Net Banking</option>
+          </select>
+        </div>
+        <div>
+          <label for="paymentDetails" class="block text-gray-700">Payment Details</label>
+          <input type="text" id="paymentDetails" name="paymentDetails" required placeholder="Card Number or Transaction ID" class="w-full border border-gray-300 p-2 rounded">
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button type="button" id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancel</button>
+          <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Pay Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white text-center py-4">
+    &copy; 2025 The Chocolate Shop. All Rights Reserved.
+  </footer>
+
+  <!-- Script to handle modal behavior -->
+  <script>
+    // Show modal when a Buy Now button is clicked
+    const buyButtons = document.querySelectorAll('.buyBtn');
+    const modal = document.getElementById('paymentModal');
+    const productNameInput = document.getElementById('productName');
+    const priceInput = document.getElementById('price');
+
+    buyButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const product = this.getAttribute('data-product');
+        const price = this.getAttribute('data-price');
+        productNameInput.value = product;
+        priceInput.value = price;
+        modal.classList.remove('hidden');
+      });
+    });
+
+    // Close modal when Cancel is clicked
+    document.getElementById('closeModal').addEventListener('click', function() {
+      modal.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
