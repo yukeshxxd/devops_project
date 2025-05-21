@@ -2,19 +2,17 @@
 FROM node:18
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
+# Copy package files and install dependencies
+COPY devvvv/package*.json ./
 RUN npm install
 
-# Copy the rest of the application files
-COPY . .
+# Copy all files inside devvvv
+COPY devvvv/ .
 
-# Expose the port your app runs on (adjust if needed)
+# Expose the port your app runs on
 EXPOSE 3000
 
-# Command to run the application (adjust if your server uses a different file)
+# Run your Node.js app
 CMD ["node", "server.js"]
