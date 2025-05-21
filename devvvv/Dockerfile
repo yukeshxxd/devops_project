@@ -5,11 +5,11 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # Copy package files and install dependencies
-COPY devvvv/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-# Copy all files inside devvvv
-COPY devvvv/ .
+# Copy all files inside current context
+COPY . .
 
 # Expose the port your app runs on
 EXPOSE 3000
