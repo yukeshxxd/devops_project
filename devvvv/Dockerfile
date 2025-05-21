@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 
-COPY . .     # ✅ Corrected line here
+COPY . .        # ✅ THIS IS THE FIXED LINE
 
 EXPOSE 3000
 
