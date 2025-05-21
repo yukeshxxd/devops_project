@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Chocolate Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Raleway", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans relative">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-purple-700 text-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center space-x-3">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+          alt="logo"
+          class="w-8 h-8"
+        />
+        <h1 class="text-2xl font-bold">The Chocolate Shop</h1>
+      </div>
+      <nav class="space-x-6 text-sm font-semibold">
+        <a href="home.html" class="hover:text-gray-300">Home</a>
+        <a href="about.html" class="hover:text-gray-300">About</a>
+        <a href="contactus.html" class="hover:text-gray-300">Contact</a>
+        <a href="login.html" id="loginLogoutLink" class="hover:text-gray-300">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section
+    class="bg-cover bg-center h-[500px]"
+    style="
+      background-image: url('https://images.unsplash.com/photo-1612531861503-68f0cc3ba04b');
+    "
+  >
+    <div class="bg-black bg-opacity-60 h-full flex items-center justify-center">
+      <div class="text-center text-white space-y-4 px-4">
+        <h2 class="text-4xl md:text-6xl font-bold">
+          Indulge in Premium Chocolates
+        </h2>
+        <p class="text-lg md:text-xl">Crafted with love, delivered with care.</p>
+        <a
+          href="#products"
+          class="inline-block bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-800 transition"
+          >Shop Now</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Search and Categories -->
+  <section class="container mx-auto py-8 px-4">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4"
+    >
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search chocolates..."
+        class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500"
+      />
+      <div id="categoryButtons" class="space-x-3">
+        <button
+          data-category="all"
+          class="px-3 py-1 bg-purple-100 text-purple-700 rounded font-semibold"
+        >
+          All
+        </button>
+        <button
+          data-category="dark"
+          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+        >
+          Dark
+        </button>
+        <button
+          data-category="milk"
+          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+        >
+          Milk
+        </button>
+        <button
+          data-category="truffles"
+          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+        >
+          Truffles
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Listing -->
+  <section
+    id="products"
+    class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+  >
+    <!-- Products inserted via JavaScript -->
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-purple-700 py-10 text-white text-center">
+    <h3 class="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h3>
+    <p class="mb-4">Get the latest updates and offers directly in your inbox.</p>
+    <form class="flex justify-center gap-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscribed!');">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="px-4 py-2 rounded w-2/3 text-black"
+        required
+      />
+      <button
+        class="bg-white text-purple-700 px-4 py-2 rounded font-semibold"
+        type="submit"
+      >
+        Subscribe
+      </button>
+    </form>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <aside
+    id="cartSidebar"
+    class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-4 overflow-y-auto transform translate-x-full transition-transform z-50 flex flex-col"
+  >
+    <h2 class="text-xl font-bold mb-4 text-purple-700">Your Cart</h2>
+    <ul id="cartItems" class="space-y-4 flex-grow overflow-auto"></ul>
+    <div class="mt-6 font-semibold text-lg" id="cartTotal">Total: Rs.0</div>
+    <button
+      id="proceedCheckoutBtn"
+      class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+      title="Proceed to Checkout"
+    >
+      Proceed to Checkout
+    </button>
+    <button
+      id="closeCartBtn"
+      class="mt-2 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition"
+    >
+      Close Cart
+    </button>
+  </aside>
+
+  <!-- Cart Toggle Button -->
+  <button
+    id="cartToggleBtn"
+    class="fixed bottom-6 right-6 bg-purple-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-purple-800 transition z-50"
+    title="Toggle Cart"
+  >
+    🛒 Cart (<span id="cartCount">0</span>)
+  </button>
+
+  <script>
+    const products = [
+      {
+        id: 1,
+        name: "Dark Chocolate",
+        category: "dark",
+        price: 799,
+        rating: 4,
+        image:
+          "https://t3.ftcdn.net/jpg/02/42/11/72/360_F_242117284_FyhQaHVNf76gqsNHNM54I0kTRxcC2Dl8.jpg",
+      },
+      {
+        id: 2,
+        name: "Belgium Truffles",
+        category: "truffles",
+        price: 1200,
+        rating: 5,
+        image:
+          "https://media.istockphoto.com/id/911742664/photo/handmade-dark-chocolates-iii.jpg?s=612x612&w=0&k=20&c=M6O9YhcQSgE0fVuzaYYtp8-KF-aG8ltMj_sSefTGAb0=",
+      },
+      {
+        id: 3,
+        name: "Kisses Chocolate",
+        category: "milk",
+        price: 1550,
+        rating: 3,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxvcU_1mYf1Mm-yVF83rKpVfq1TTPjL4WrQ&s",
+      },
+      {
+        id: 4,
+        name: "Milk Chocolate Bar",
+        category: "milk",
+        price: 699,
+        rating: 4,
+        image:
+          "https://cdn.pixabay.com/photo/2017/01/20/00/30/chocolate-1991344_1280.jpg",
+      },
+      {
+        id: 5,
+        name: "Hazelnut Dark Chocolate",
+        category: "dark",
+        price: 950,
+        rating: 5,
+        image:
+          "https://cdn.pixabay.com/photo/2017/02/28/21/48/dark-chocolate-2109906_1280.jpg",
+      },
+      {
+        id: 6,
+        name: "White Chocolate Truffles",
+        category: "truffles",
+        price: 1300,
+        rating: 4,
+        image:
+          "https://cdn.pixabay.com/photo/2016/03/27/07/08/chocolates-1289658_1280.jpg",
+      },
+      {
+        id: 7,
+        name: "Caramel Milk Chocolate",
+        category: "milk",
+        price: 850,
+        rating: 4,
+        image:
+          "https://cdn.pixabay.com/photo/2014/12/03/21/26/chocolate-555034_1280.jpg",
+      },
+      {
+        id: 8,
+        name: "Mint Dark Chocolate",
+        category: "dark",
+        price: 880,
+        rating: 3,
+        image:
+          "https://cdn.pixabay.com/photo/2017/01/31/15/29/mint-2027692_1280.jpg",
+      },
+      {
+        id: 9,
+        name: "Truffle Gift Box",
+        category: "truffles",
+        price: 2100,
+        rating: 5,
+        image:
+          "https://cdn.pixabay.com/photo/2016/11/18/15/41/chocolate-1836103_1280.jpg",
+      },
+    ];
+  
+    // Elements
+    const productContainer = document.getElementById("products");
+    const searchInput = document.getElementById("searchInput");
+    const categoryButtons = document.getElementById("categoryButtons");
+    const cartToggleBtn = document.getElementById("cartToggleBtn");
+    const cartSidebar = document.getElementById("cartSidebar");
+    const closeCartBtn = document.getElementById("closeCartBtn");
+    const cartItemsList = document.getElementById("cartItems");
+    const cartCount = document.getElementById("cartCount");
+    const cartTotal = document.getElementById("cartTotal");
+    const loginLogoutLink = document.getElementById("loginLogoutLink");
+    const proceedCheckoutBtn = document.getElementById("proceedCheckoutBtn");
+  
+    let user = null;
+    let cart = [];
+  
+    // Fetch logged-in user info from server
+    async function fetchUser() {
+      try {
+        const res = await fetch("/me", { credentials: "include" });
+        if (res.ok) {
+          user = await res.json();
+        } else {
+          user = null;
+        }
+      } catch (e) {
+        user = null;
+      }
+      updateLoginLogoutLink();
+    }
+  
+    // Update login/logout link in header
+    function updateLoginLogoutLink() {
+      if (user) {
+        loginLogoutLink.textContent = "Logout";
+        loginLogoutLink.href = "#";
+        loginLogoutLink.onclick = async (e) => {
+          e.preventDefault();
+          try {
+            const res = await fetch("/logout", {
+              method: "POST",
+              credentials: "include",
+            });
+            if (res.ok) {
+              user = null;
+              alert("Logged out successfully");
+              updateLoginLogoutLink();
+              cart = [];
+              renderCart();
+              window.location.href = "/login.html";
+            } else {
+              alert("Logout failed");
+            }
+          } catch {
+            alert("Logout failed");
+          }
+        };
+      } else {
+        loginLogoutLink.textContent = "Login";
+        loginLogoutLink.href = "/login.html";
+        loginLogoutLink.onclick = null;
+      }
+    }
+  
+    // Render star ratings helper
+    function renderStars(rating) {
+      let stars = "";
+      for (let i = 0; i < 5; i++) {
+        stars += i < rating ? "&#9733;" : "&#9734;";
+      }
+      return stars;
+    }
+  
+    // Render products with filtering
+    function renderProducts(filterCategory = "all", searchTerm = "") {
+      productContainer.innerHTML = "";
+      const filtered = products.filter((p) => {
+        const matchesCategory =
+          filterCategory === "all" || p.category === filterCategory;
+        const matchesSearch =
+          p.name.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+  
+      filtered.forEach((product) => {
+        const div = document.createElement("div");
+        div.className =
+          "bg-white rounded-lg shadow-md p-4 flex flex-col items-center";
+  
+        div.innerHTML = `
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="h-48 w-full object-cover rounded"
+          />
+          <h3 class="mt-4 font-semibold text-lg">${product.name}</h3>
+          <div class="text-yellow-400 text-lg">${renderStars(product.rating)}</div>
+          <p class="mt-2 text-purple-700 font-bold text-xl">Rs.${product.price}</p>
+          <button
+            class="mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-900 transition addToCartBtn"
+            data-id="${product.id}"
+          >
+            Add to Cart
+          </button>
+        `;
+  
+        productContainer.appendChild(div);
+      });
+  
+      // Bind Add to Cart buttons
+      document.querySelectorAll(".addToCartBtn").forEach((btn) =>
+        btn.addEventListener("click", async () => {
+          if (!user) {
+            alert("Please login to add items to your cart.");
+            window.location.href = "/login.html";
+            return;
+          }
+          const productId = parseInt(btn.getAttribute("data-id"));
+          await addToCart(productId);
+        })
+      );
+    }
+  
+    // Add to cart - send request to server or update local state (demo fallback)
+    async function addToCart(productId) {
+  try {
+    const res = await fetch("/cart/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ productId }),
+    });
+    if (res.ok) {
+      await loadCart();
+      renderCart();
+      alert("Added to cart!");
+    } else {
+      const errorText = await res.text();
+      console.error("Add to cart error:", res.status, errorText);
+      alert("Failed to add to cart: " + errorText);
+    }
+  } catch (err) {
+    console.error("Add to cart exception:", err);
+    alert("Failed to add to cart (network error)");
+  }
+}
+
+  
+    // Remove from cart
+    async function removeFromCart(productId) {
+      try {
+        const res = await fetch("/cart/remove", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ productId }),
+        });
+        if (res.ok) {
+          await loadCart();
+          renderCart();
+        } else {
+          alert("Failed to remove from cart");
+        }
+      } catch {
+        alert("Failed to remove from cart");
+      }
+    }
+  
+    // Change quantity in cart
+    async function changeQuantity(productId, amount) {
+      try {
+        const res = await fetch("/cart/change", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ productId, amount }),
+        });
+        if (res.ok) {
+          await loadCart();
+          renderCart();
+        } else {
+          alert("Failed to update quantity");
+        }
+      } catch {
+        alert("Failed to update quantity");
+      }
+    }
+  
+    // Load cart from server
+    async function loadCart() {
+      if (!user) {
+        cart = [];
+        renderCart();
+        return;
+      }
+      try {
+        const res = await fetch("/cart", { credentials: "include" });
+        if (res.ok) {
+          cart = await res.json();
+        } else {
+          cart = [];
+        }
+      } catch {
+        cart = [];
+      }
+    }
+  
+    // Render cart items in sidebar
+    function renderCart() {
+      cartItemsList.innerHTML = "";
+      if (cart.length === 0) {
+        cartItemsList.innerHTML = "<p>Your cart is empty.</p>";
+      } else {
+        cart.forEach((item) => {
+          const li = document.createElement("li");
+          li.className = "flex items-center space-x-3";
+  
+          li.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded" />
+            <div class="flex-grow">
+              <h4 class="font-semibold">${item.name}</h4>
+              <p>Rs.${item.price} x ${item.quantity}</p>
+              <div class="flex space-x-2 mt-1">
+                <button class="px-2 bg-gray-200 rounded" data-action="decrease" data-id="${item.id}">-</button>
+                <button class="px-2 bg-gray-200 rounded" data-action="increase" data-id="${item.id}">+</button>
+                <button class="px-2 bg-red-400 text-white rounded" data-action="remove" data-id="${item.id}">Remove</button>
+              </div>
+            </div>
+          `;
+  
+          cartItemsList.appendChild(li);
+        });
+  
+        // Bind buttons
+        cartItemsList.querySelectorAll("button").forEach((btn) => {
+          const id = parseInt(btn.getAttribute("data-id"));
+          const action = btn.getAttribute("data-action");
+          btn.onclick = async () => {
+            if (action === "increase") await changeQuantity(id, 1);
+            else if (action === "decrease") await changeQuantity(id, -1);
+            else if (action === "remove") await removeFromCart(id);
+          };
+        });
+      }
+  
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      cartTotal.textContent = `Total: Rs.${total}`;
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+  
+    // Event listeners
+    cartToggleBtn.addEventListener("click", () => {
+      if (cartSidebar.classList.contains("translate-x-full")) {
+        cartSidebar.classList.remove("translate-x-full");
+        cartSidebar.classList.add("translate-x-0");
+      } else {
+        cartSidebar.classList.add("translate-x-full");
+        cartSidebar.classList.remove("translate-x-0");
+      }
+    });
+  
+    closeCartBtn.addEventListener("click", () => {
+      cartSidebar.classList.add("translate-x-full");
+      cartSidebar.classList.remove("translate-x-0");
+    });
+  
+    // Search input
+    searchInput.addEventListener("input", (e) => {
+      renderProducts(
+        currentCategory,
+        e.target.value.trim()
+      );
+    });
+  
+    // Category buttons (event delegation)
+    let currentCategory = "all";
+    categoryButtons.addEventListener("click", (e) => {
+      if (e.target.tagName === "BUTTON") {
+        currentCategory = e.target.getAttribute("data-category");
+        renderProducts(currentCategory, searchInput.value.trim());
+  
+        // Highlight active button
+        [...categoryButtons.children].forEach((btn) =>
+          btn.classList.remove("bg-purple-900")
+        );
+        e.target.classList.add("bg-purple-900");
+      }
+    });
+  
+    // Checkout button
+    proceedCheckoutBtn.addEventListener("click", () => {
+      if (!user) {
+        alert("Please login to proceed to checkout.");
+        window.location.href = "/login.html";
+        return;
+      }
+      if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+      }
+      window.location.href = "/checkout.html";
+    });
+  
+    // Initialize
+    (async () => {
+      await fetchUser();
+      await loadCart();
+      renderProducts();
+      renderCart();
+    })();
+  </script>
+  
+</body>
+</html>

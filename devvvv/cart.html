@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart - The Chocolate Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-purple-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">The Chocolate Shop</h1>
+      <ul class="flex space-x-4">
+        <li><a href="/index.html" class="hover:underline">Home</a></li>
+        <li><a href="/cart.html" class="hover:underline">Cart</a></li>
+        <li><a href="/login.html" class="hover:underline">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Cart Section -->
+  <section class="container mx-auto py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Your Cart</h2>
+    <div id="cart-items" class="space-y-4">
+      <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <div class="text-right mt-4">
+      <strong>Total: Rs.<span id="total-price">0</span></strong>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white text-center py-4">
+    &copy; 2025 The Chocolate Shop. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Fetch cart items from the server
+    fetch('/api/cart')
+      .then(response => response.json())
+      .then(cart => {
+        const cartItems = document.getElementById('cart-items');
+        const totalPriceElem = document.getElementById('total-price');
+        let totalPrice = 0;
+
+        cart.items.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'bg-white p-4 rounded-lg shadow flex justify-between items-center';
+          itemDiv.innerHTML = `
+            <div>
+              <h3 class="text-xl font-semibold">${item.product.name}</h3>
+              <p class="text-gray-600">Rs.${item.product.price} x ${item.quantity}</p>
+            </div>
+            <button onclick="removeFromCart('${item.product._id}')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Remove</button>
+          `;
+          cartItems.appendChild(itemDiv);
+          totalPrice += item.product.price * item.quantity;
+        });
+
+        totalPriceElem.textContent = totalPrice;
+      });
+
+    function removeFromCart(productId) {
+      fetch('/api/cart/remove', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ productId })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+        location.reload();
+      });
+    }
+  </script>
+</body>
+</html>

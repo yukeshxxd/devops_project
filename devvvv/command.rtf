@@ -1,0 +1,1725 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2818
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red200\green20\blue201;\red47\green180\blue29;
+\red64\green11\blue217;\red180\green36\blue25;\red159\green160\blue28;\red111\green111\blue111;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c83397\c23074\c82666;\cssrgb\c20241\c73898\c14950;
+\cssrgb\c32309\c18666\c88229;\cssrgb\c76411\c21697\c12527;\cssrgb\c68469\c68012\c14211;\cssrgb\c51167\c51167\c51167;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Fri Apr  4 10:47:42 on console\
+adithyan@Adithyans-MacBook-Air ~ % node -v\
+v23.7.0\
+adithyan@Adithyans-MacBook-Air ~ % npm -v\
+\
+10.9.2\
+adithyan@Adithyans-MacBook-Air ~ % npm install express  \
+\
+\
+changed 2 packages, and audited 94 packages in 32s\
+\
+15 packages are looking for funding\
+  run `npm fund` for details\
+\
+1 
+\f1\b \cf3 critical
+\f0\b0 \cf2  severity vulnerability\
+\
+To address all issues, run:\
+  npm audit fix\
+\
+Run `npm audit` for details.\
+adithyan@Adithyans-MacBook-Air ~ % mongod\
+\
+zsh: command not found: mongod\
+adithyan@Adithyans-MacBook-Air ~ % brew info mongodb-community\
+\
+\cf4 ==>\cf2  
+\f1\b mongodb/brew/mongodb-community
+\f0\b0 : stable 8.0.5\
+High-performance, schema-free, document-oriented database\
+\ul https://www.mongodb.com/\ulnone \
+Conflicts with:\
+  mongodb-enterprise\
+Not installed\
+From: \ul https://github.com/mongodb/homebrew-brew/blob/HEAD/Formula/mongodb-community.rb\ulnone \
+\cf5 ==>\cf2  
+\f1\b Dependencies
+\f0\b0 \
+Recommended: 
+\f1\b mongodb-database-tools \cf4 \uc0\u10004 
+\f0\b0 \cf2 , 
+\f1\b mongosh \cf6 \uc0\u10008 
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Options
+\f0\b0 \
+--with-enable-test-commands\
+	Configures MongoDB to allow test commands such as failpoints\
+--without-mongodb-database-tools\
+	Build without mongodb-database-tools support\
+--without-mongosh\
+	Build without mongosh support\
+adithyan@Adithyans-MacBook-Air ~ % mongod --version\
+\
+zsh: command not found: mongod\
+adithyan@Adithyans-MacBook-Air ~ % sudo find / -type f -name mongod 2>/dev/null\
+\
+Password:\
+^C\
+adithyan@Adithyans-MacBook-Air ~ % nano ~/.zshrc\
+\
+adithyan@Adithyans-MacBook-Air ~ % ls -l /Users/adithyan/mongodb-macos-x86_64-8.0.0/bin\
+\
+total 32\
+-rwxr-xr-x@ 1 adithyan  staff  15209 Sep 12  2024 install_compass\
+adithyan@Adithyans-MacBook-Air ~ % ls -l /Users/adithyan/mongodb-macos-x86_64-8.0.0/bin\
+\
+total 32\
+-rwxr-xr-x@ 1 adithyan  staff  15209 Sep 12  2024 install_compass\
+adithyan@Adithyans-MacBook-Air ~ % brew services stop mongodb/brew/mongodb-community\
+\
+\cf7 Warning:\cf2  Service `mongodb-community` is not started.\
+adithyan@Adithyans-MacBook-Air ~ % brew uninstall mongodb/brew/mongodb-community\
+\
+\cf6 Error:\cf2  No available formula or cask with the name "mongodb/brew/mongodb-community". Did you mean mongodb/brew/mongodb-community@4.4, mongodb/brew/mongodb-community@5.0, mongodb/brew/mongodb-community@6.0, mongodb/brew/mongodb-community@7.0, mongodb/brew/mongodb-community-shell or mongodb/brew/mongodb-csfle?\
+adithyan@Adithyans-MacBook-Air ~ % brew list\
+\
+\cf5 ==>\cf2  
+\f1\b Formulae
+\f0\b0 \
+abseil			fontconfig		imath			libssh2			little-cms2		openjdk@17		ruby-build\
+aom			freetds			jenkins			libtiff			lz4			openjdk@21		sqlite\
+apr			freetype		jenkins-lts		libtool			lzo			openldap		tcl-tk@8\
+apr-util		gd			jpeg-turbo		libunistring		m4			openssl@3		tidy-html5\
+argon2			gettext			jpeg-xl			libuv			maven			pcre2			tomcat\
+aspell			giflib			krb5			libvmaf			minikube		php			unixodbc\
+autoconf		git			kubernetes-cli		libx11			mongodb-database-tools	pixman			webp\
+brotli			git-gui			libavif			libxau			mpdecimal		pkgconf			wget\
+c-ares			glib			libdeflate		libxcb			mysql			protobuf		xorgproto\
+ca-certificates		gmp			libidn2			libxdmcp		nginx			python-packaging	xz\
+cairo			graphite2		libnghttp2		libxext			node			python@3.13		zlib\
+capstone		harfbuzz		libpng			libxrender		oniguruma		rbenv			zstd\
+curl			highway			libpq			libyaml			openexr			readline\
+dos2unix		icu4c@76		libsodium		libzip			openjdk			rtmpdump\
+\
+\cf5 ==>\cf2  
+\f1\b Casks
+\f0\b0 \
+firebase-admin	flutter		powershell\
+adithyan@Adithyans-MacBook-Air ~ % brew update\
+\
+\cf5 ==>\cf2  
+\f1\b Updating Homebrew...
+\f0\b0 \
+Updated 6 taps (shivammathur/php, homebrew/services, mongodb/brew, dart-lang/dart, homebrew/core and homebrew/cask).\
+\cf5 ==>\cf2  
+\f1\b New Formulae
+\f0\b0 \
+ab-av1                              ente-cli                            goimports                           libgoa                              restish\
+adaptivecpp                         evans                               grafana-alloy                       libgudev                            rhai\
+algolia                             excalidraw-converter                gtree                               lld@19                              rpds-py\
+alloy                               fabric-ai                           gut                                 llvm@19                             sentry-native\
+anubis                              falcosecurity-libs                  harsh                               lume                                sequoia-sqv\
+anyquery                            fiona                               hjson                               mcpm                                shuttle\
+async_simple                        fortitude                           icu4c@77                            mob                                 statesmith\
+block-goose-cli                     fortran-stdlib                      iguana                              mox                                 terraform-iam-policy-validator\
+cargo-sort                          fpm                                 is-fast                             netfetch                            typioca\
+cargo-spellcheck                    gama                                jaguar                              nmstatectl                          umockdev\
+cpp-lazy                            gamdl                               jenkins-cli                         node-red                            unciv\
+darklua                             gcr                                 kbld                                nom                                 veccore\
+dart-lang/dart/dart@3.7.2           gdown                               keyutils                            otel-cli                            x-cmd\
+decompose                           geesefs                             krep                                physunits                           xan\
+dish                                gersemi                             ktexttemplate                       projectable                         yalantinglibs\
+dockcheck                           git-graph                           lavat                               protobuf@29                         yutu\
+dvr-scan                            git-who                             lazyjournal                         ra-multiplex                        zlib-rs\
+easyeda2kicad                       gnome-online-accounts               leetgo                              rasterio\
+\cf5 ==>\cf2  
+\f1\b New Casks
+\f0\b0 \
+ace-studio                          desktime                            font-pretendard-gov                 k6-studio                           restapia\
+advanced-renamer                    earnapp                             font-source-han-code-jp             kate                                slidepad\
+agent-tars                          focu                                font-special-gothic                 kilohearts-installer                sokim\
+atv-remote                          font-lxgw-wenkai-gb-lite            font-special-gothic-condensed-one   macskk                              soundanchor\
+bambu-connect                       font-maple-mono-normal              font-special-gothic-expanded-one    moment                              stability-matrix\
+beutl                               font-maple-mono-normal-cn           font-webdings                       mouseless@preview                   swift-shift\
+captainplugins                      font-maple-mono-normal-nf           font-winky-rough                    nethlink                            tal-drum\
+charles@4                           font-maple-mono-normal-nf-cn        grayjay                             nvidia-nsight-compute               thelowtechguys-cling\
+chime@alpha                         font-playpen-sans-arabic            hamrs-pro                           pastenow                            trae-cn\
+chordpotion                         font-playpen-sans-deva              hy-rpe2                             qobuz-downloader                    triliumnext-notes\
+cloudflare-warp@beta                font-playpen-sans-hebrew            inmusic-software-center             qt-design-studio                    vesktop\
+coterm                              font-playpen-sans-thai              irpf2025                            rave                                voiceink\
+\cf5 ==>\cf2  
+\f1\b Outdated Formulae
+\f0\b0 \
+aom                       gettext                   icu4c@76                  libidn2                   little-cms2               openexr                   ruby-build\
+ca-certificates           git                       jenkins                   libnghttp2                mongodb-database-tools    openssl@3                 sqlite\
+cairo                     git-gui                   jenkins-lts               libpng                    mysql                     pcre2                     tomcat\
+capstone                  glib                      kubernetes-cli            libpq                     nginx                     php                       xz\
+curl                      harfbuzz                  libavif                   libx11                    node                      pkgconf                   zstd\
+\
+You have 
+\f1\b 35
+\f0\b0  outdated formulae installed.\
+You can upgrade them with 
+\f1\b brew upgrade
+\f0\b0 \
+or list them with 
+\f1\b brew outdated
+\f0\b0 .\
+adithyan@Adithyans-MacBook-Air ~ % brew tap mongodb/brew\
+\
+adithyan@Adithyans-MacBook-Air ~ % brew install mongodb-community\
+\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for mongodb/brew/mongodb-community: \cf4 mongodb/brew/mongodb-database-tools\cf2 , \cf4 icu4c@77\cf2 , \cf4 libnghttp2\cf2 , \cf4 ca-certificates\cf2 , \cf4 openssl@3\cf2 , \cf4 node\cf2  and \cf4 mongosh
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongodb/brew/mongodb-database-tools
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://fastdl.mongodb.org/tools/db/mongodb-database-tools-macos-x86_64-100.12.0.zip
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 icu4c@77
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/manifests/77.1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/blobs/sha256:54d609febedd08e8a4a825435d85f6d4db045f586523edb8965434e8e9c93fa6
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libnghttp2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.65.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:523994aa28f56be6c23161889273d48ce9a964acfe3517768c41cf46359e27e8
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 ca-certificates
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2025-02-25
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:8f46fb05f753f80f2bc398c0a24b10d680bd77d496e2b931de0b61998e37aebc
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 openssl@3
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:e8a8957f282b27371283b8c7a17e743c1c4e4e242ea7ee68bbe23f883da4948f
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 node
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/node/manifests/23.11.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/node/blobs/sha256:83ab6d90d6787296315f7936cdb862a93e332d12f5a730004fbbc6a74940446e
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongosh
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mongosh/manifests/2.4.2
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mongosh/blobs/sha256:ec7fbb0a0100af4c4103b64bab670aa002442a0736cf112ef7e7567254ecccc7
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongodb/brew/mongodb-community
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-8.0.6.tgz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Installing mongodb-community from mongodb/brew
+\f0\b0 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for mongodb/brew/mongodb-community: \cf4 mongodb/brew/mongodb-database-tools\cf2 , \cf4 icu4c@77\cf2 , \cf4 libnghttp2\cf2 , \cf4 ca-certificates\cf2 , \cf4 openssl@3\cf2 , \cf4 node\cf2  and \cf4 mongosh
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 mongodb/brew/mongodb-database-tools
+\f0\b0 \cf2 \
+\cf6 Error:\cf2  An exception occurred within a child process:\
+  Errno::EACCES: Permission denied @ dir_s_mkdir - /usr/local/Cellar/mongodb-database-tools/100.12.0\
+adithyan@Adithyans-MacBook-Air ~ % sudo chown -R $(whoami) /usr/local\
+\
+Password:\
+chown: /usr/local: Operation not permitted\
+adithyan@Adithyans-MacBook-Air ~ % brew services start mongodb/brew/mongodb-community\
+\
+\cf6 Error:\cf2  Formula `mongodb-community` is not installed.\
+adithyan@Adithyans-MacBook-Air ~ % mongod --dbpath=/Users/adithyan/data/db\
+zsh: command not found: mongod\
+adithyan@Adithyans-MacBook-Air ~ % sudo mkdir -p /usr/local/Cellar /usr/local/Frameworks /usr/local/sbin\
+\
+Password:\
+adithyan@Adithyans-MacBook-Air ~ % sudo chown -R $(whoami):admin /usr/local/Cellar /usr/local/Frameworks /usr/local/sbin\
+\
+adithyan@Adithyans-MacBook-Air ~ % sudo chmod -R u+rwX /usr/local/Cellar /usr/local/Frameworks /usr/local/sbin\
+\
+adithyan@Adithyans-MacBook-Air ~ % brew install mongodb/brew/mongodb-community\
+\
+\cf5 ==>\cf2  
+\f1\b Auto-updating Homebrew...
+\f0\b0 \
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with\
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for mongodb/brew/mongodb-community: \cf4 mongodb/brew/mongodb-database-tools\cf2 , \cf4 icu4c@77\cf2 , \cf4 libnghttp2\cf2 , \cf4 ca-certificates\cf2 , \cf4 openssl@3\cf2 , \cf4 node\cf2  and \cf4 mongosh
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongodb/brew/mongodb-database-tools
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://fastdl.mongodb.org/tools/db/mongodb-database-tools-macos-x86_64-100.12.0.zip
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/68adbbe847ab8a561b38af57bb17b8a5ecfb483f13f459640763d47dd2f93c1d--mongodb-database-tools-macos-x86_64-100.12.0.zip\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 icu4c@77
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/manifests/77.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/35ec2c3adb94255ba47424a4334da9616d97e1ec6d59ed907b368535018bed0a--icu4c@77-77.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/blobs/sha256:54d609febedd08e8a4a825435d85f6d4db045f586523edb8965434e8e9c93fa6
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/11e74c87967dc86e6b3deabe4c454ae87bbf7535c100ec0d330418593c466408--icu4c@77--77.1.sonoma.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libnghttp2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.65.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/5a72fb9f57dd728c5d6d30917849ae15111c3b440595f5694738ec9434c12427--libnghttp2-1.65.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:523994aa28f56be6c23161889273d48ce9a964acfe3517768c41cf46359e27e8
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/191d95acdc4141c166b592449043fb072918e1ddf7c8be5f54ed89c72b0f617f--libnghttp2--1.65.0.sonoma.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 ca-certificates
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2025-02-25
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/6c1debb525d4dc6007afae4cd2b772105111632b22fc28506550f6dfe27c6d52--ca-certificates-2025-02-25.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:8f46fb05f753f80f2bc398c0a24b10d680bd77d496e2b931de0b61998e37aebc
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/50c52ec06796c09a75e7a9484e6db3205765a935a486322e3795612fd23b405e--ca-certificates--2025-02-25.all.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 openssl@3
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/a2bb8b71ebddb1fe8553581fcbc1ffc4ab36795c68b3cd47977cf83f1673a5b1--openssl@3-3.4.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:e8a8957f282b27371283b8c7a17e743c1c4e4e242ea7ee68bbe23f883da4948f
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/61cc77ca74a6b42a288f6ea3d69963ae32990cc00b8545e6a14e11352bde8ca5--openssl@3--3.4.1.sequoia.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 node
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/node/manifests/23.11.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/7fd443f1bbabaaa9ce02e5c6e295a1bc5d65a47d5787de104fb694f10f1dfc10--node-23.11.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/node/blobs/sha256:83ab6d90d6787296315f7936cdb862a93e332d12f5a730004fbbc6a74940446e
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/fa8b3acf16e7a7f09d07eefbe8527e54e3c4dd129ac66dbf2f99022149864eda--node--23.11.0.sonoma.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongosh
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mongosh/manifests/2.4.2
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/691514f603b88dcd2b2937df83a6dda85fbb63842ea941fd3c8b7d0c19e981ce--mongosh-2.4.2.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mongosh/blobs/sha256:ec7fbb0a0100af4c4103b64bab670aa002442a0736cf112ef7e7567254ecccc7
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/5608bd65508ee5276472c22cbafbd02aeb07ff385f17bbb79b9eae4d03e8ec6f--mongosh--2.4.2.sonoma.bottle.tar.gz\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mongodb/brew/mongodb-community
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-8.0.6.tgz
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/24faeb2afbf5a51f06b2e62e5e55f89a3a0c94abf81dde343589deff9547fc67--mongodb-macos-x86_64-8.0.6.tgz\
+\cf5 ==>\cf2  
+\f1\b Installing mongodb-community from mongodb/brew
+\f0\b0 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for mongodb/brew/mongodb-community: \cf4 mongodb/brew/mongodb-database-tools\cf2 , \cf4 icu4c@77\cf2 , \cf4 libnghttp2\cf2 , \cf4 ca-certificates\cf2 , \cf4 openssl@3\cf2 , \cf4 node\cf2  and \cf4 mongosh
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 mongodb/brew/mongodb-database-tools
+\f0\b0 \cf2 \
+\uc0\u55356 \u57210   /usr/local/Cellar/mongodb-database-tools/100.12.0: 15 files, 132.6MB, built in 4 seconds\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 icu4c@77
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/icu4c/77/manifests/77.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/35ec2c3adb94255ba47424a4334da9616d97e1ec6d59ed907b368535018bed0a--icu4c@77-77.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring icu4c@77--77.1.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/icu4c@77/77.1: 277 files, 80MB\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 libnghttp2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libnghttp2/manifests/1.65.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/5a72fb9f57dd728c5d6d30917849ae15111c3b440595f5694738ec9434c12427--libnghttp2-1.65.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring libnghttp2--1.65.0.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/libnghttp2/1.65.0: 14 files, 730.4KB\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 ca-certificates
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ca-certificates/manifests/2025-02-25
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/6c1debb525d4dc6007afae4cd2b772105111632b22fc28506550f6dfe27c6d52--ca-certificates-2025-02-25.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring ca-certificates--2025-02-25.all.bottle.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Regenerating CA certificate bundle from keychain, this may take a while...
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/ca-certificates/2025-02-25: 4 files, 235.9KB\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 openssl@3
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.4.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/a2bb8b71ebddb1fe8553581fcbc1ffc4ab36795c68b3cd47977cf83f1673a5b1--openssl@3-3.4.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring openssl@3--3.4.1.sequoia.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/openssl@3/3.4.1: 7,236 files, 120.7MB\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 node
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/node/manifests/23.11.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/7fd443f1bbabaaa9ce02e5c6e295a1bc5d65a47d5787de104fb694f10f1dfc10--node-23.11.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring node--23.11.0.sonoma.bottle.tar.gz
+\f0\b0 \
+\cf6 Error:\cf2  The `brew link` step did not complete successfully\
+The formula built, but is not symlinked into /usr/local\
+Could not symlink bin/corepack\
+Target /usr/local/bin/corepack\
+already exists. You may want to remove it:\
+  rm '/usr/local/bin/corepack'\
+\
+To force the link and overwrite all conflicting files:\
+  brew link --overwrite node\
+\
+To list all files that would be deleted:\
+  brew link --overwrite node --dry-run\
+\
+Possible conflicting files are:\
+/usr/local/bin/corepack -> /usr/local/lib/node_modules/corepack/dist/corepack.js\
+/usr/local/bin/node\
+/usr/local/share/man/man1/node.1\
+/usr/local/lib/node_modules/corepack/CHANGELOG.md\
+/usr/local/lib/node_modules/corepack/LICENSE.md\
+/usr/local/lib/node_modules/corepack/README.md\
+/usr/local/lib/node_modules/corepack/dist/corepack.js\
+/usr/local/lib/node_modules/corepack/dist/lib/corepack.cjs\
+/usr/local/lib/node_modules/corepack/dist/npm.js\
+/usr/local/lib/node_modules/corepack/dist/npx.js\
+/usr/local/lib/node_modules/corepack/dist/pnpm.js\
+/usr/local/lib/node_modules/corepack/dist/pnpx.js\
+/usr/local/lib/node_modules/corepack/dist/yarn.js\
+/usr/local/lib/node_modules/corepack/dist/yarnpkg.js\
+/usr/local/lib/node_modules/corepack/package.json\
+/usr/local/lib/node_modules/corepack/shims/corepack\
+/usr/local/lib/node_modules/corepack/shims/corepack.cmd\
+/usr/local/lib/node_modules/corepack/shims/corepack.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/corepack\
+/usr/local/lib/node_modules/corepack/shims/nodewin/corepack.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/corepack.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npm\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npm.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npm.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npx\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npx.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/npx.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpm\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpm.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpm.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpx\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpx.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/pnpx.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarn\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarn.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarn.ps1\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarnpkg\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarnpkg.cmd\
+/usr/local/lib/node_modules/corepack/shims/nodewin/yarnpkg.ps1\
+/usr/local/lib/node_modules/corepack/shims/npm\
+/usr/local/lib/node_modules/corepack/shims/npm.cmd\
+/usr/local/lib/node_modules/corepack/shims/npm.ps1\
+/usr/local/lib/node_modules/corepack/shims/npx\
+/usr/local/lib/node_modules/corepack/shims/npx.cmd\
+/usr/local/lib/node_modules/corepack/shims/npx.ps1\
+/usr/local/lib/node_modules/corepack/shims/pnpm\
+/usr/local/lib/node_modules/corepack/shims/pnpm.cmd\
+/usr/local/lib/node_modules/corepack/shims/pnpm.ps1\
+/usr/local/lib/node_modules/corepack/shims/pnpx\
+/usr/local/lib/node_modules/corepack/shims/pnpx.cmd\
+/usr/local/lib/node_modules/corepack/shims/pnpx.ps1\
+/usr/local/lib/node_modules/corepack/shims/yarn\
+/usr/local/lib/node_modules/corepack/shims/yarn.cmd\
+/usr/local/lib/node_modules/corepack/shims/yarn.ps1\
+/usr/local/lib/node_modules/corepack/shims/yarnpkg\
+/usr/local/lib/node_modules/corepack/shims/yarnpkg.cmd\
+/usr/local/lib/node_modules/corepack/shims/yarnpkg.ps1\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/node/23.11.0: 2,602 files, 74MB\
+\cf4 ==>\cf2  
+\f1\b Installing mongodb/brew/mongodb-community dependency: \cf4 mongosh
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mongosh/manifests/2.4.2
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/691514f603b88dcd2b2937df83a6dda85fbb63842ea941fd3c8b7d0c19e981ce--mongosh-2.4.2.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring mongosh--2.4.2.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/mongosh/2.4.2: 11,187 files, 67.7MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 mongodb/brew/mongodb-community
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+To start mongodb/brew/mongodb-community now and restart at login:\
+  brew services start mongodb/brew/mongodb-community\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/mongodb-community/8.0.6: 12 files, 365.6MB, built in 7 seconds\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup mongodb-community`...
+\f0\b0 \
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\
+\cf5 ==>\cf2  
+\f1\b Upgrading 13 dependents of upgraded formulae:
+\f0\b0 \
+Disable this behaviour by setting HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK.\
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\
+cairo 1.18.2 -> 1.18.4, curl 8.11.1 -> 8.13.0, git-gui 2.48.1 -> 2.49.0, glib 2.82.4 -> 2.84.0_1, harfbuzz 10.2.0 -> 11.0.0, jenkins 2.496 -> 2.504, jenkins-lts 2.479.3 -> 2.492.3, libpq 17.2 -> 17.4_1, mysql 9.2.0 -> 9.2.0_3, nginx 1.27.3 -> 1.27.4, shivammathur/php/php 8.4.3 -> 8.4.5, ruby-build 20250130 -> 20250326, tomcat 11.0.2 -> 11.0.5\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpq/manifests/17.4_1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/curl/manifests/8.13.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for curl: \cf4 xz\cf2  and \cf4 zstd
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 xz
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:1d0c4c1288e3ed0cfb2093db85e445872df5875da1a3828e05f5a58759dcbb80
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 zstd
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:bcfccd14315dedf3291f77682702f80711fb8829bd14a53431d60204eb99ec32
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 curl
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:bc44f5d463aeb83665feb028968e43fec2aa2731244b79a2c350e01e514a8493
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/glib/manifests/2.84.0_1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for glib: \cf4 pcre2\cf2  and \cf4 gettext
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.45
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 pcre2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:5b1916e8e569da37aabc596561eb93a6bdf7cff4d55d35a351576c071ce723cc
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.24
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 gettext
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:f4d648eb039e20e1cd0ac5f0fc33b4a5375e63c1e40b90c52ef19d1783556a92
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 glib
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:8a76be953615aea9f5ce5ce1af01bffbf00f3ffb9f11dbcde272e62661966233
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/cairo/manifests/1.18.4
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for cairo: \cf4 libpng\cf2  and \cf4 libx11
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.47
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libpng
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:d5f62a5676999c7ad51c469dee4135b4760dec9170b6c44cbb64493617b7b090
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.12
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libx11
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libx11/blobs/sha256:5d916769cf91a23fff62dbd1b9c791beeca44504e72907511b352f8f758dae4b
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 cairo
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/cairo/blobs/sha256:76a88eab178ee0ada4fa05270834be6808e0f6480f68002d9f21bc41ee2e1cb6
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/11.0.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 harfbuzz
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:e926030ed7dd66ab59f5e2cc9102e76e44ab9452dab95b4db2548327547d319f
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/jenkins/manifests/2.504
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for jenkins: \cf4 little-cms2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/little-cms2/manifests/2.17
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 little-cms2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/little-cms2/blobs/sha256:6f3a75284dcdd815c90822ac2d7ca5da326f9b1caa429b57bc95bc1f49d76881
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 jenkins
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/jenkins/blobs/sha256:e04b65cb27f03679effc4e7e98a339c22efabc25c4d81020e19212afbf49f482
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/jenkins-lts/manifests/2.492.3
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 jenkins-lts
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/jenkins-lts/blobs/sha256:59af03191b7d3c2bf252152c49e87e8c3ec2d320f50452106541529b5d08e35c
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mysql/manifests/9.2.0_3
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for mysql: \cf4 protobuf@29
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/protobuf/29/manifests/29.4
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 protobuf@29
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/protobuf/29/blobs/sha256:eb0a700c134c204d4c933894671fc3d77933997d75403455b0b15ff4273932f3
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 mysql
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/mysql/blobs/sha256:774354f586c49cdfcab91a18925b241b14152809290ef0bf4aae4fd00027b3ae
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/nginx/manifests/1.27.4
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/shivammathur/php/php/manifests/8.4.5-1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for shivammathur/php/php: \cf4 capstone\cf2 , \cf4 aom\cf2 , \cf4 libavif\cf2 , \cf4 libpq\cf2  and \cf4 sqlite
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/capstone/manifests/5.0.5
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 capstone
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/capstone/blobs/sha256:711163343b8868aa9667a4d42967e3904b5061e91df878ae8cb9119e53fc89af
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/aom/manifests/3.12.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 aom
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/aom/blobs/sha256:9ad194193f6572efa27c18e0b0d302efb9fe8483d83bafc6a281f761c2f13496
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libavif/manifests/1.2.1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libavif
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libavif/blobs/sha256:017c5e8e2fd2c29e85a549292d4df072b7e25bb22553538d9fde27f9f458ca7f
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpq/manifests/17.4_1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/8d2508db844ae831edabd1278a255f18b3725fe563b97f53277d49284466c4a6--libpq-17.4_1.bottle_manifest.json\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 libpq
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpq/blobs/sha256:56e9a1b6989876211ac979f936f54aed74af06371f039b331f15c970d9924ec7
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.49.1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 sqlite
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:e716021f04832c5efd6d6c54f6577062dd3e7c61338df31525853f69b17d2bab
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 shivammathur/php/php
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/shivammathur/php/php/blobs/sha256:b08311878323ee4613635d7ec54a32aba4a79c0ea8be3e0bbc915706b1dd7394
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ruby-build/manifests/20250326
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching dependencies for ruby-build: \cf4 pkgconf
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pkgconf/manifests/2.4.3-1
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 pkgconf
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pkgconf/blobs/sha256:60803149fa486b8da14591ce5c016e37c9388c1ded2a88d9167a84926cc74957
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 ruby-build
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/ruby-build/blobs/sha256:a0a9e64a9775d06de937b30d5c4a09eb29cd30f29951686dee2bb062ac8fa309
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/tomcat/manifests/11.0.5
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 tomcat
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/tomcat/blobs/sha256:705b2c308462ba5f29eaa17a33f40fe278eb183bbaebe9e0393125745d9becef
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/git-gui/manifests/2.49.0
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 curl
+\f0\b0 \cf2 \
+  8.11.1 -> 8.13.0 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for curl: \cf4 xz\cf2  and \cf4 zstd
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing curl dependency: \cf4 xz
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/xz/manifests/5.8.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/a50144423da26f3eb1964f609d011f391d059b385515c276fd637b1ec032419f--xz-5.8.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring xz--5.8.0.sequoia.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/xz/5.8.0: 96 files, 2.3MB\
+\cf4 ==>\cf2  
+\f1\b Installing curl dependency: \cf4 zstd
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/zstd/manifests/1.5.7
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/596a67b1677f62a8e24e6fdfa7c879891221cb8261242f4355fb4deff1a2ec39--zstd-1.5.7.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring zstd--1.5.7.sequoia.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/zstd/1.5.7: 32 files, 2.4MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 curl
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring curl--8.13.0.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/curl/8.13.0: 536 files, 4.1MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup curl`...
+\f0\b0 \
+Removing: /usr/local/Cellar/curl/8.11.1... (531 files, 4.0MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/curl_bottle_manifest--8.11.1... (15.2KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/curl--8.11.1... (1.4MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 glib
+\f0\b0 \cf2 \
+  2.82.4 -> 2.84.0_1 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for glib: \cf4 pcre2\cf2  and \cf4 gettext
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing glib dependency: \cf4 pcre2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pcre2/manifests/10.45
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/bbac938545583185faba88567f1a952d7cc0b825820a2980533f7b3550dc31ad--pcre2-10.45.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring pcre2--10.45.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/pcre2/10.45: 242 files, 6.8MB\
+\cf4 ==>\cf2  
+\f1\b Installing glib dependency: \cf4 gettext
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/gettext/manifests/0.24
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/8abb4a73a097ce307663b52d2da2d1d9b10df035244eb566425042eee157d0b3--gettext-0.24.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring gettext--0.24.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/gettext/0.24: 2,189 files, 18.8MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 glib
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring glib--2.84.0_1.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/glib/2.84.0_1: 504 files, 34.9MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup glib`...
+\f0\b0 \
+Removing: /usr/local/Cellar/glib/2.82.4... (504 files, 34.6MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/glib_bottle_manifest--2.82.4-1... (21.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/glib--2.82.4... (8.2MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 cairo
+\f0\b0 \cf2 \
+  1.18.2 -> 1.18.4 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for cairo: \cf4 libpng\cf2  and \cf4 libx11
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing cairo dependency: \cf4 libpng
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpng/manifests/1.6.47
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/072d8f136f69cf75140ffb8a832f60b362a14dba897d78ed7fc83e3ca30b2ede--libpng-1.6.47.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring libpng--1.6.47.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/libpng/1.6.47: 28 files, 1.2MB\
+\cf4 ==>\cf2  
+\f1\b Installing cairo dependency: \cf4 libx11
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libx11/manifests/1.8.12
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/8510ddcf75e7c4313fe4f8b0999d667b22f2ae0b850bc80ba53becb609335934--libx11-1.8.12.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring libx11--1.8.12.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/libx11/1.8.12: 1,043 files, 6.8MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 cairo
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring cairo--1.18.4.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/cairo/1.18.4: 53 files, 2.0MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup cairo`...
+\f0\b0 \
+Removing: /usr/local/Cellar/cairo/1.18.2... (53 files, 2.0MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/cairo_bottle_manifest--1.18.2... (36.4KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/cairo--1.18.2... (775.8KB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 harfbuzz
+\f0\b0 \cf2 \
+  10.2.0 -> 11.0.0 \
+\cf5 ==>\cf2  
+\f1\b Pouring harfbuzz--11.0.0.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/harfbuzz/11.0.0: 77 files, 10.2MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup harfbuzz`...
+\f0\b0 \
+Removing: /usr/local/Cellar/harfbuzz/10.2.0... (77 files, 10MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/harfbuzz_bottle_manifest--10.2.0... (28.7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/harfbuzz--10.2.0... (2.7MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 jenkins
+\f0\b0 \cf2 \
+  2.496 -> 2.504 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for jenkins: \cf4 little-cms2
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing jenkins dependency: \cf4 little-cms2
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/little-cms2/manifests/2.17
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/0e5e5ac9e1df07ae001662a85a70b344b31345897c284172f14874c9d329cb85--little-cms2-2.17.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring little-cms2--2.17.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/little-cms2/2.17: 23 files, 1.2MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 jenkins
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring jenkins--2.504.all.bottle.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+Note: When using launchctl the port will be 8080.\
+\
+To start jenkins now and restart at login:\
+  brew services start jenkins\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/jenkins/bin/jenkins --httpListenAddress\\=127.0.0.1 --httpPort\\=8080\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/jenkins/2.504: 9 files, 93.5MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup jenkins`...
+\f0\b0 \
+Removing: /usr/local/Cellar/jenkins/2.496... (9 files, 93.9MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/jenkins_bottle_manifest--2.496... (6.2KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/jenkins--2.496... (93.3MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 jenkins-lts
+\f0\b0 \cf2 \
+  2.479.3 -> 2.492.3 \
+\cf5 ==>\cf2  
+\f1\b Pouring jenkins-lts--2.492.3.all.bottle.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+Note: When using launchctl the port will be 8080.\
+\
+To restart jenkins-lts after an upgrade:\
+  brew services restart jenkins-lts\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/openjdk@21/bin/java -Dmail.smtp.starttls.enable\\=true -jar /usr/local/opt/jenkins-lts/libexec/jenkins.war --httpListenAddress\\=127.0.0.1 --httpPort\\=8080\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/jenkins-lts/2.492.3: 9 files, 95.8MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup jenkins-lts`...
+\f0\b0 \
+Removing: /usr/local/Cellar/jenkins-lts/2.479.3... (9 files, 95.9MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/jenkins-lts_bottle_manifest--2.479.3... (6.2KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/jenkins-lts--2.479.3... (95.2MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 mysql
+\f0\b0 \cf2 \
+  9.2.0 -> 9.2.0_3 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for mysql: \cf4 protobuf@29
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing mysql dependency: \cf4 protobuf@29
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/protobuf/29/manifests/29.4
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/79af11557ac231cc4a15c5e425af5edddfb86d564c59b33b396d54e7168deb4d--protobuf@29-29.4.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring protobuf@29--29.4.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/protobuf@29/29.4: 445 files, 15MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 mysql
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring mysql--9.2.0_3.sonoma.bottle.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:\
+ - brew services stop mysql\
+ - brew install mysql@8.4\
+ - brew services start mysql@8.4\
+ - brew services stop mysql@8.4\
+ - brew services start mysql\
+\
+We've installed your MySQL database without a root password. To secure it run:\
+    mysql_secure_installation\
+\
+MySQL is configured to only allow connections from localhost by default\
+\
+To connect run:\
+    mysql -u root\
+\
+To restart mysql after an upgrade:\
+  brew services restart mysql\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/mysql/bin/mysqld_safe --datadir\\=/usr/local/var/mysql\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/mysql/9.2.0_3: 329 files, 279.4MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup mysql`...
+\f0\b0 \
+Removing: /usr/local/Cellar/mysql/9.2.0... (329 files, 279.4MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/mysql_bottle_manifest--9.2.0... (22.0KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/mysql--9.2.0... (74.8MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 shivammathur/php/php
+\f0\b0 \cf2 \
+  8.4.3 -> 8.4.5 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for shivammathur/php/php: \cf4 capstone\cf2 , \cf4 aom\cf2 , \cf4 libavif\cf2 , \cf4 libpq\cf2  and \cf4 sqlite
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing shivammathur/php/php dependency: \cf4 capstone
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/capstone/manifests/5.0.5
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/c0c0dfcac152442240eb9c849b2694a9d2d35ce93b92e701037188322abc8b6c--capstone-5.0.5.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring capstone--5.0.5.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/capstone/5.0.5: 31 files, 22.0MB\
+\cf4 ==>\cf2  
+\f1\b Installing shivammathur/php/php dependency: \cf4 aom
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/aom/manifests/3.12.0
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/f08f16b98da583fe0e9212922381b7f89716226535884f4477b6dc807cc2dd3c--aom-3.12.0.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring aom--3.12.0.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/aom/3.12.0: 24 files, 11.9MB\
+\cf4 ==>\cf2  
+\f1\b Installing shivammathur/php/php dependency: \cf4 libavif
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libavif/manifests/1.2.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/a3880a25438e74c798bd1fc9305af44be3f3680e04c511626de04a030cf1838d--libavif-1.2.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring libavif--1.2.1.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/libavif/1.2.1: 22 files, 852.9KB\
+\cf4 ==>\cf2  
+\f1\b Installing shivammathur/php/php dependency: \cf4 libpq
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/libpq/manifests/17.4_1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/8d2508db844ae831edabd1278a255f18b3725fe563b97f53277d49284466c4a6--libpq-17.4_1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring libpq--17.4_1.sonoma.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/libpq/17.4_1: 2,393 files, 31.2MB\
+\cf4 ==>\cf2  
+\f1\b Installing shivammathur/php/php dependency: \cf4 sqlite
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/sqlite/manifests/3.49.1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/ce3cf24bf33f0eff2d169e046ba5da3ec75ab9fe0439e7b7face44f42e033fcb--sqlite-3.49.1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring sqlite--3.49.1.sequoia.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/sqlite/3.49.1: 13 files, 4.6MB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 shivammathur/php/php
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring php--8.4.5.ventura.bottle.1.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set php_ini /usr/local/etc/php/8.4/php.ini system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set php_dir /usr/local/share/pear system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set doc_dir /usr/local/share/pear/doc system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set ext_dir /usr/local/lib/php/pecl/20240924 system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set bin_dir /usr/local/opt/php/bin system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set data_dir /usr/local/share/pear/data system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set cfg_dir /usr/local/share/pear/cfg system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set www_dir /usr/local/share/pear/htdocs system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set man_dir /usr/local/share/man system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set test_dir /usr/local/share/pear/test system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear config-set php_bin /usr/local/opt/php/bin/php system
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/php/8.4.5/bin/pear update-channels
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+To enable PHP in Apache add the following to httpd.conf and restart Apache:\
+    LoadModule php_module /usr/local/opt/php/lib/httpd/modules/libphp.so\
+\
+    <FilesMatch \\.php$>\
+        SetHandler application/x-httpd-php\
+    </FilesMatch>\
+\
+Finally, check DirectoryIndex includes index.php\
+    DirectoryIndex index.php index.html\
+\
+The php.ini and php-fpm.ini file can be found in:\
+    /usr/local/etc/php/8.4/\
+\
+To start shivammathur/php/php now and restart at login:\
+  brew services start shivammathur/php/php\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/php/sbin/php-fpm --nodaemonize\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/php/8.4.5: 529 files, 106.8MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup php`...
+\f0\b0 \
+Removing: /usr/local/Cellar/php/8.4.3... (529 files, 106.8MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/php_bottle_manifest--8.4.3... (42.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/php--8.4.3... (25.5MB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 ruby-build
+\f0\b0 \cf2 \
+  20250130 -> 20250326 \
+\cf4 ==>\cf2  
+\f1\b Installing dependencies for ruby-build: \cf4 pkgconf
+\f0\b0 \cf2 \
+\cf4 ==>\cf2  
+\f1\b Installing ruby-build dependency: \cf4 pkgconf
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://ghcr.io/v2/homebrew/core/pkgconf/manifests/2.4.3-1
+\f0\b0 \
+Already downloaded: /Users/adithyan/Library/Caches/Homebrew/downloads/f938254e85413ef0d18283c9c932823434b88c0c790e04e7534e2a3e923d0588--pkgconf-2.4.3-1.bottle_manifest.json\
+\cf5 ==>\cf2  
+\f1\b Pouring pkgconf--2.4.3.sequoia.bottle.1.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/pkgconf/2.4.3: 27 files, 342KB\
+\cf4 ==>\cf2  
+\f1\b Installing \cf4 ruby-build
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Pouring ruby-build--20250326.all.bottle.tar.gz
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/ruby-build/20250326: 645 files, 356.2KB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup ruby-build`...
+\f0\b0 \
+Removing: /usr/local/Cellar/ruby-build/20250130... (638 files, 349.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/ruby-build_bottle_manifest--20250130... (2.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/ruby-build--20250130... (71KB)\
+\cf4 ==>\cf2  
+\f1\b Upgrading \cf4 tomcat
+\f0\b0 \cf2 \
+  11.0.2 -> 11.0.5 \
+\cf5 ==>\cf2  
+\f1\b Pouring tomcat--11.0.5.all.bottle.tar.gz
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+Configuration files: /usr/local/etc/tomcat\
+\
+To restart tomcat after an upgrade:\
+  brew services restart tomcat\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/tomcat/bin/catalina run\
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/tomcat/11.0.5: 625 files, 17.6MB\
+\cf5 ==>\cf2  
+\f1\b Running `brew cleanup tomcat`...
+\f0\b0 \
+Removing: /usr/local/Cellar/tomcat/11.0.2... (812 files, 100.1MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/tomcat_bottle_manifest--11.0.2... (6.1KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/tomcat--11.0.2... (13MB)\
+\cf4 ==>\cf2  
+\f1\b Checking for dependents of upgraded formulae...
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Reinstalling 1 dependent with broken linkage from source:
+\f0\b0 \
+python@3.13\
+\cf4 ==>\cf2  
+\f1\b Fetching \cf4 python@3.13
+\f0\b0 \cf2 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://raw.githubusercontent.com/Homebrew/homebrew-core/abc8f5e98f0d8313a2ac7f1bd57cf3c6fe887dff/Formula/p/python@3.13.rb
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://raw.githubusercontent.com/Homebrew/formula-patches/8b5bcbb262d1ea4e572bba55043bf7d2341a6821/python/3.13-sysconfig.diff
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://files.pythonhosted.org/packages/d5/ae/09427bea9227a33ec834ed5461432752fd5d02b14f93dd68406c91684622/flit_core-3.10.1.tar.gz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://files.pythonhosted.org/packages/47/3e/68beeeeb306ea20ffd30b3ed993f531d16cd884ec4f60c9b1e238f69f2af/pip-25.0.tar.gz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://files.pythonhosted.org/packages/92/ec/089608b791d210aec4e7f97488e67ab0d33add3efccb83a056cbafe3a2a6/setuptools-75.8.0.tar.gz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://files.pythonhosted.org/packages/8a/98/2d9906746cdc6a6ef809ae6338005b3f21bb568bea3165cfc6a243fdc25c/wheel-0.45.1.tar.gz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf5 ==>\cf2  
+\f1\b Downloading https://www.python.org/ftp/python/3.13.2/Python-3.13.2.tgz
+\f0\b0 \
+############################################################################################################################################################################## 100.0%\
+\cf4 ==>\cf2  
+\f1\b Reinstalling \cf4 python@3.13\cf2  
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Downloading https://formulae.brew.sh/api/formula.jws.json
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Patching
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Applying 3.13-sysconfig.diff
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b ./configure --enable-ipv6 --datarootdir=/usr/local/Cellar/python@3.13/3.13.2/share --datadir=/usr/local/Cellar/python@3.13/3.13.2/share --without-ensurepip --enable-loadable-sql
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b make
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b make install PYTHONAPPSDIR=/usr/local/Cellar/python@3.13/3.13.2
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python@3.13/3.13.2/share/python@3.13
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/python@3.13/3.13.2/bin/python3.13 -m venv /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build/bin/pip3 install -v --no-binary :all: --no-index .
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build/bin/pip3 install -v --no-binary :all: --no-index .
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build/bin/pip3 install -v --no-binary :all: --no-index .
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build/bin/pip3 wheel -v --no-binary :all: --no-index --wheel-dir=/usr/local/Cellar/python@3.13/3.13.2/libexec .
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /private/tmp/pythonA3.13-20250404-54866-fkh3wx/Python-3.13.2/whl_build/bin/pip3 wheel -v --no-binary :all: --no-index --wheel-dir=/usr/local/Cellar/python@3.13/3.13.2/Frameworks
+\f0\b0 \
+\cf6 Error:\cf2  The `brew link` step did not complete successfully\
+The formula built, but is not symlinked into /usr/local\
+Could not symlink bin/idle3\
+Target /usr/local/bin/idle3\
+already exists. You may want to remove it:\
+  rm '/usr/local/bin/idle3'\
+\
+To force the link and overwrite all conflicting files:\
+  brew link --overwrite python@3.13\
+\
+To list all files that would be deleted:\
+  brew link --overwrite python@3.13 --dry-run\
+\
+Possible conflicting files are:\
+/usr/local/bin/idle3 -> /Library/Frameworks/Python.framework/Versions/3.10/bin/idle3\
+/usr/local/bin/pydoc3 -> /Library/Frameworks/Python.framework/Versions/3.10/bin/pydoc3\
+/usr/local/bin/python3 -> /Library/Frameworks/Python.framework/Versions/3.10/bin/python3\
+/usr/local/bin/python3-config -> /Library/Frameworks/Python.framework/Versions/3.10/bin/python3-config\
+\cf5 ==>\cf2  
+\f1\b Downloading https://formulae.brew.sh/api/formula.jws.json
+\f0\b0 \
+\cf7 Warning:\cf2  formula.jws.json: update failed, falling back to cached version.\
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/python@3.13/3.13.2/bin/python3.13 -Im ensurepip
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b /usr/local/Cellar/python@3.13/3.13.2/bin/python3.13 -Im pip install -v --no-index --upgrade --isolated --target=/usr/local/lib/python3.13/site-packages /usr/local/Cellar/python@
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b Summary
+\f0\b0 \
+\uc0\u55356 \u57210   /usr/local/Cellar/python@3.13/3.13.2: 8,309 files, 191.6MB, built in 17 minutes 48 seconds\
+\cf4 ==>\cf2  
+\f1\b `brew cleanup` has not been run in the last 30 days, running now...
+\f0\b0 \
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.\
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).\
+Removing: /usr/local/Cellar/aom/3.11.0... (24 files, 12.1MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/aom_bottle_manifest--3.11.0... (20.7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/aom--3.11.0... (4.4MB)\
+Removing: /usr/local/Cellar/ca-certificates/2024-11-26... (4 files, 239.4KB)\
+Removing: /usr/local/Cellar/ca-certificates/2024-12-31... (4 files, 233.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/ca-certificates_bottle_manifest--2024-11-26... (1.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/ca-certificates_bottle_manifest--2024-12-31... (1.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/ca-certificates--2024-12-31... (130.5KB)\
+Removing: /usr/local/Cellar/capstone/5.0.3... (31 files, 22.0MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/capstone_bottle_manifest--5.0.3... (9.7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/capstone--5.0.3... (3MB)\
+Removing: /usr/local/Cellar/fontconfig/2.15.0... (91 files, 2.2MB)\
+Removing: /usr/local/Cellar/gettext/0.23... (2,052 files, 21.2MB)\
+Removing: /usr/local/Cellar/gettext/0.23.1... (2,052 files, 21MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/gettext_bottle_manifest--0.23... (11.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/gettext_bottle_manifest--0.23.1... (11.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/gettext--0.23.1... (8.9MB)\
+Removing: /usr/local/Cellar/libavif/1.1.1... (21 files, 519.4KB)\
+Removing: /usr/local/Cellar/libnghttp2/1.64.0... (14 files, 745.1KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libnghttp2_bottle_manifest--1.64.0... (7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libnghttp2--1.64.0... (220.2KB)\
+Removing: /usr/local/Cellar/libpng/1.6.44... (28 files, 1.2MB)\
+Removing: /usr/local/Cellar/libpng/1.6.45... (28 files, 1.2MB)\
+Removing: /usr/local/Cellar/libpng/1.6.46... (28 files, 1.2MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpng_bottle_manifest--1.6.45... (8.1KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpng_bottle_manifest--1.6.46... (8.1KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpng--1.6.45... (443.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpng--1.6.46... (449.8KB)\
+Removing: /usr/local/Cellar/libpq/17.2... (2,391 files, 30.9MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpq_bottle_manifest--17.2... (15.2KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libpq--17.2... (7.1MB)\
+Removing: /usr/local/Cellar/libuv/1.49.2... (20 files, 1.1MB)\
+Removing: /usr/local/Cellar/libx11/1.8.10... (1,043 files, 6.8MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libx11_bottle_manifest--1.8.10... (17KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/libx11--1.8.10... (2.1MB)\
+Removing: /usr/local/Cellar/little-cms2/2.16... (23 files, 1.2MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/little-cms2_bottle_manifest--2.16-1... (11.1KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/little-cms2--2.16... (412.4KB)\
+Removing: /usr/local/Cellar/mongodb-database-tools/100.9.5... (15 files, 120.9MB)\
+Removing: /usr/local/Cellar/node/23.7.0... (4,863 files, 120.1MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/node_bottle_manifest--23.7.0... (15.7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/node--23.7.0... (18.8MB)\
+Removing: /usr/local/Cellar/oniguruma/6.9.9... (15 files, 1.4MB)\
+Removing: /usr/local/Cellar/openssl@3/3.4.0... (7,236 files, 33.8MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/openssl@3_bottle_manifest--3.4.0... (8.9KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/openssl@3--3.4.0... (9.0MB)\
+Removing: /usr/local/Cellar/pcre2/10.44... (237 files, 6.4MB)\
+Removing: /usr/local/Cellar/pkgconf/2.3.0_1... (27 files, 327.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/pkgconf--2.3.0_1... (105.3KB)\
+Removing: /usr/local/Cellar/protobuf/29.2... (444 files, 15MB)\
+Removing: /usr/local/Cellar/python@3.13/3.13.1... (3,267 files, 61MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/python@3.13--flit-core--3.10.1.tar.gz... (41.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/python@3.13--patch--e1c2699cf3e39731a19207ed69400a67336cda7767aa08f6f46029f26b1d733b.diff... (1.7KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/python@3.13--pip--25.0.tar.gz... (1.9MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/python@3.13--setuptools--75.8.0.tar.gz... (1.3MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/python@3.13--wheel--0.45.1.tar.gz... (105KB)\
+Removing: /usr/local/Cellar/sqlite/3.47.2... (12 files, 4.8MB)\
+Removing: /usr/local/Cellar/sqlite/3.48.0... (12 files, 4.8MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/sqlite_bottle_manifest--3.47.2... (8.3KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/sqlite_bottle_manifest--3.48.0... (8.3KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/sqlite--3.48.0... (2.3MB)\
+Removing: /usr/local/Cellar/xz/5.6.3... (96 files, 1.7MB)\
+Removing: /usr/local/Cellar/xz/5.6.4... (96 files, 1.8MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/xz_bottle_manifest--5.6.4... (8.8KB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/xz--5.6.4... (574.6KB)\
+Removing: /usr/local/Cellar/zstd/1.5.6... (32 files, 2.3MB)\
+\cf4 ==>\cf2  
+\f1\b Autoremoving 1 unneeded formula:
+\f0\b0 \
+protobuf\
+Removing: /Users/adithyan/Library/Caches/Homebrew/pip_cache... (10 files, 3.1MB)\
+Removing: /Users/adithyan/Library/Caches/Homebrew/Cask/docker--4.38.0,181591.dmg... (531.5MB)\
+Removing: /Users/adithyan/Library/Logs/Homebrew/nginx... (64B)\
+Pruned 2 symbolic links and 12 directories from /usr/local\
+\cf4 ==>\cf2  
+\f1\b Caveats
+\f0\b0 \
+\cf5 ==>\cf2  
+\f1\b mongodb-community
+\f0\b0 \
+To start mongodb/brew/mongodb-community now and restart at login:\
+  brew services start mongodb/brew/mongodb-community\
+\cf5 ==>\cf2  
+\f1\b jenkins
+\f0\b0 \
+Note: When using launchctl the port will be 8080.\
+\
+To start jenkins now and restart at login:\
+  brew services start jenkins\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/jenkins/bin/jenkins --httpListenAddress\\=127.0.0.1 --httpPort\\=8080\
+\cf5 ==>\cf2  
+\f1\b jenkins-lts
+\f0\b0 \
+Note: When using launchctl the port will be 8080.\
+\
+To restart jenkins-lts after an upgrade:\
+  brew services restart jenkins-lts\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/openjdk@21/bin/java -Dmail.smtp.starttls.enable\\=true -jar /usr/local/opt/jenkins-lts/libexec/jenkins.war --httpListenAddress\\=127.0.0.1 --httpPort\\=8080\
+\cf5 ==>\cf2  
+\f1\b mysql
+\f0\b0 \
+Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:\
+ - brew services stop mysql\
+ - brew install mysql@8.4\
+ - brew services start mysql@8.4\
+ - brew services stop mysql@8.4\
+ - brew services start mysql\
+\
+We've installed your MySQL database without a root password. To secure it run:\
+    mysql_secure_installation\
+\
+MySQL is configured to only allow connections from localhost by default\
+\
+To connect run:\
+    mysql -u root\
+\
+To restart mysql after an upgrade:\
+  brew services restart mysql\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/mysql/bin/mysqld_safe --datadir\\=/usr/local/var/mysql\
+\cf5 ==>\cf2  
+\f1\b php
+\f0\b0 \
+To enable PHP in Apache add the following to httpd.conf and restart Apache:\
+    LoadModule php_module /usr/local/opt/php/lib/httpd/modules/libphp.so\
+\
+    <FilesMatch \\.php$>\
+        SetHandler application/x-httpd-php\
+    </FilesMatch>\
+\
+Finally, check DirectoryIndex includes index.php\
+    DirectoryIndex index.php index.html\
+\
+The php.ini and php-fpm.ini file can be found in:\
+    /usr/local/etc/php/8.4/\
+\
+To start shivammathur/php/php now and restart at login:\
+  brew services start shivammathur/php/php\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/php/sbin/php-fpm --nodaemonize\
+\cf5 ==>\cf2  
+\f1\b tomcat
+\f0\b0 \
+Configuration files: /usr/local/etc/tomcat\
+\
+To restart tomcat after an upgrade:\
+  brew services restart tomcat\
+Or, if you don't want/need a background service you can just run:\
+  /usr/local/opt/tomcat/bin/catalina run\
+adithyan@Adithyans-MacBook-Air ~ % brew services start mongodb-community@7.0\
+\
+\cf6 Error:\cf2  Formula `mongodb-community@7.0` is not installed.\
+adithyan@Adithyans-MacBook-Air ~ % brew list | grep mongodb\
+\
+mongodb-community\
+mongodb-database-tools\
+adithyan@Adithyans-MacBook-Air ~ % brew services start mongodb-community\
+\
+\cf5 ==>\cf2  
+\f1\b Successfully started `mongodb-community` (label: homebrew.mxcl.mongodb-community)
+\f0\b0 \
+adithyan@Adithyans-MacBook-Air ~ % ps aux | grep mongod\
+\
+adithyan         87735   0.0  0.0 34111716    376 s000  R+    1:06PM   0:00.01 grep mongod\
+adithyan         87625   0.0  0.0 33800376      8   ??  S     1:06PM   0:00.04 /usr/local/opt/mongodb-community/bin/mongod --config /usr/local/etc/mongod.conf\
+adithyan@Adithyans-MacBook-Air ~ % brew services list\
+\
+
+\f1\b Name              Status   User     File
+\f0\b0 \
+jenkins           none              \
+jenkins-lts       \cf4 started\cf2   root     ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist\
+mongodb-community \cf4 started\cf2   adithyan ~/Library/LaunchAgents/homebrew.mxcl.mongodb-community.plist\
+mysql             stopped  adithyan ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist\
+nginx             \cf6 error  \cf2 1 adithyan ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist\
+php               none              \
+tomcat            \cf4 started\cf2   adithyan ~/Library/LaunchAgents/homebrew.mxcl.tomcat.plist\
+adithyan@Adithyans-MacBook-Air ~ % mongosh\
+\
+Current Mongosh Log ID:	67ef8c1d2de5f46557c063ea\
+Connecting to:		
+\f1\b \cf4 mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.4.2
+\f0\b0 \cf2 \
+Using MongoDB:		8.0.6\
+
+\f1\b \cf7 Using Mongosh
+\f0\b0 \cf2 :		2.4.2\
+\
+For mongosh info see: 
+\f1\b https://www.mongodb.com/docs/mongodb-shell/
+\f0\b0 \
+\
+\
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).\
+You can opt-out by running the 
+\f1\b disableTelemetry()
+\f0\b0  command.\
+\
+
+\f1\b \cf7 ------
+\f0\b0 \cf2 \
+   
+\f1\b \cf7 The server generated these startup warnings when booting
+\f0\b0 \cf2 \
+   2025-04-04T13:06:46.752+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted\
+
+\f1\b \cf7 ------
+\f0\b0 \cf2 \
+\
+test> node server.js\
+... \
+Uncaught:\
+
+\f1\b \cf6 SyntaxError
+\f0\b0 \cf2 : Missing semicolon. (1:4)\
+\
+
+\f1\b \cf6 >
+\f0\b0 \cf8  1 |\cf2  node server\cf7 .\cf2 js\
+ \cf8    |\cf2      
+\f1\b \cf6 ^
+\f0\b0 \cf2 \
+ \cf8  2 |\cf2 \
+ \cf8  3 |\cf2 \
+\
+test> exit\
+... \
+adithyan@Adithyans-MacBook-Air ~ % cd /Users/adithyan/Desktop/devvvv\
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+(node:91514) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+(Use `node --trace-warnings ...` to show where the warning was created)\
+(node:91514) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+Server running on port 3000\
+MongoDB Connected\
+^C\
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+/Users/adithyan/Desktop/devvvv/server.js:51\
+    res.send('<h2 class="text-center mt-8 text-green-600">Order placed successfully!</h2><p class="text-center"><a href="/" class="text-purple-600\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+\
+SyntaxError: Invalid or unexpected token\
+\cf8     at wrapSafe (node:internal/modules/cjs/loader:1486:18)\cf2 \
+\cf8     at Module._compile (node:internal/modules/cjs/loader:1528:20)\cf2 \
+\cf8     at Object..js (node:internal/modules/cjs/loader:1706:10)\cf2 \
+\cf8     at Module.load (node:internal/modules/cjs/loader:1289:32)\cf2 \
+\cf8     at Function._load (node:internal/modules/cjs/loader:1108:12)\cf2 \
+\cf8     at TracingChannel.traceSync (node:diagnostics_channel:322:14)\cf2 \
+\cf8     at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)\cf2 \
+\cf8     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)\cf2 \
+\cf8     at node:internal/main/run_main_module:36:49\cf2 \
+\
+Node.js v22.14.0\
+adithyan@Adithyans-MacBook-Air devvvv % \
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+/Users/adithyan/Desktop/devvvv/server.js:51\
+    res.send('<h2 class="text-center mt-8 text-green-600">Order placed successfully!</h2><p class="text-center"><a href="/" class="text-purple-600\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+\
+SyntaxError: Invalid or unexpected token\
+\cf8     at wrapSafe (node:internal/modules/cjs/loader:1486:18)\cf2 \
+\cf8     at Module._compile (node:internal/modules/cjs/loader:1528:20)\cf2 \
+\cf8     at Object..js (node:internal/modules/cjs/loader:1706:10)\cf2 \
+\cf8     at Module.load (node:internal/modules/cjs/loader:1289:32)\cf2 \
+\cf8     at Function._load (node:internal/modules/cjs/loader:1108:12)\cf2 \
+\cf8     at TracingChannel.traceSync (node:diagnostics_channel:322:14)\cf2 \
+\cf8     at wrapModuleLoad (node:internal/modules/cjs/loader:220:24)\cf2 \
+\cf8     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)\cf2 \
+\cf8     at node:internal/main/run_main_module:36:49\cf2 \
+\
+Node.js v22.14.0\
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+(node:93560) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+(Use `node --trace-warnings ...` to show where the warning was created)\
+(node:93560) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+Server running on port 3000\
+MongoDB Connected\
+^C\
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+(node:1866) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+(Use `node --trace-warnings ...` to show where the warning was created)\
+(node:1866) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+Server running on port 3000\
+MongoDB Connected\
+Error: ENOENT: no such file or directory, stat '/Users/adithyan/Desktop/devvvv/public/home.html'\
+Error: ENOENT: no such file or directory, stat '/Users/adithyan/Desktop/devvvv/public/home.html'\
+^C\
+adithyan@Adithyans-MacBook-Air devvvv % node server.js\
+\
+(node:2965) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+(Use `node --trace-warnings ...` to show where the warning was created)\
+(node:2965) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version\
+Server running on port 3000\
+MongoDB Connected\
+^C\
+adithyan@Adithyans-MacBook-Air devvvv % \
+adithyan@Adithyans-MacBook-Air devvvv % cd\
+adithyan@Adithyans-MacBook-Air ~ % cd\
+adithyan@Adithyans-MacBook-Air ~ % \
+}
