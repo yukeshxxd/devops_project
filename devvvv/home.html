@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Chocolate Shop</title>
+  <title>Sweet Treats</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
     rel="stylesheet"
   />
   <script>
@@ -14,239 +14,283 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Raleway", "sans-serif"],
+            sans: ["Poppins", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+            serif: ["Merriweather", "serif"], 
           },
+          colors: {
+            chocolateDark: '#3A201A', 
+            chocolateLight: '#6F4E37', 
+            creamyWhite: '#FFF8E1', 
+            berryRed: '#A30000', 
+            goldenCaramel: '#D4AF37', 
+          },
+          boxShadow: {
+            'deep': '0 15px 30px rgba(0, 0, 0, 0.25)',
+            'subtle': '0 4px 10px rgba(0, 0, 0, 0.08)',
+          }
         },
       },
     };
   </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .product-card {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      background-color: #fcfcfc;
+    }
+    .category-button.active {
+      background-color: #A30000;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans relative">
+<body class="bg-creamyWhite text-chocolateDark font-sans relative">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-purple-700 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
+  <header class="sticky top-0 z-50 bg-chocolateDark text-creamyWhite shadow-deep">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <div class="flex items-center space-x-3">
         <img
           src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
-          alt="logo"
-          class="w-8 h-8"
+          alt="Chocolate Logo"
+          class="w-10 h-10 transform rotate-[-5deg]"
         />
-        <h1 class="text-2xl font-bold">The Chocolate Shop</h1>
+        <h1 class="text-3xl font-bold font-display tracking-wide">Sweet Treats</h1>
       </div>
-      <nav class="space-x-6 text-sm font-semibold">
-        <a href="home.html" class="hover:text-gray-300">Home</a>
-        <a href="about.html" class="hover:text-gray-300">About</a>
-        <a href="contactus.html" class="hover:text-gray-300">Contact</a>
-        <a href="login.html" id="loginLogoutLink" class="hover:text-gray-300">Login</a>
+      <nav class="space-x-8 text-lg font-semibold hidden md:flex">
+        <a href="home.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Home</a>
+        <a href="about.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">About</a>
+        <a href="contactus.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Contact</a>
+        <a href="login.html" id="loginLogoutLink" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Login</a>
       </nav>
+      <button class="md:hidden text-creamyWhite text-3xl">
+        &#9776; </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section
-    class="bg-cover bg-center h-[500px]"
+    class="bg-cover bg-center h-[650px] flex items-center justify-center relative"
     style="
-      background-image: url('https://images.unsplash.com/photo-1612531861503-68f0cc3ba04b');
+      background-image: url('https://images.unsplash.com/photo-1612531861503-68f0cc3ba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     "
   >
-    <div class="bg-black bg-opacity-60 h-full flex items-center justify-center">
-      <div class="text-center text-white space-y-4 px-4">
-        <h2 class="text-4xl md:text-6xl font-bold">
-          Indulge in Premium Chocolates
-        </h2>
-        <p class="text-lg md:text-xl">Crafted with love, delivered with care.</p>
-        <a
-          href="#products"
-          class="inline-block bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-800 transition"
-          >Shop Now</a
-        >
-      </div>
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="text-center text-white space-y-7 px-8 z-10">
+      <h2 class="text-6xl md:text-8xl font-bold font-display leading-tight drop-shadow-lg animate-fade-in-down">
+        Indulge in Exquisite Chocolates
+      </h2>
+      <p class="text-xl md:text-2xl font-light tracking-wide animate-fade-in-up">
+        Handcrafted with passion, delivered with joy to your doorstep.
+      </p>
+      <a
+        href="#products"
+        class="inline-block bg-goldenCaramel text-chocolateDark px-10 py-5 rounded-full text-xl font-semibold shadow-xl hover:bg-creamyWhite hover:text-chocolateDark transition transform hover:scale-105 duration-300 animate-bounce-in"
+        >Discover Our Collection</a
+      >
     </div>
   </section>
 
-  <!-- Search and Categories -->
-  <section class="container mx-auto py-8 px-4">
+  <section class="container mx-auto py-16 px-6">
     <div
-      class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4"
+      class="flex flex-col md:flex-row justify-between items-center mb-10 gap-8"
     >
       <input
         id="searchInput"
         type="text"
-        placeholder="Search chocolates..."
-        class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500"
+        placeholder="Search for your favorite chocolate..."
+        class="w-full md:w-1/3 px-6 py-4 border border-gray-300 rounded-lg shadow-subtle focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-chocolateLight text-chocolateDark placeholder-gray-500 text-lg"
       />
-      <div id="categoryButtons" class="space-x-3">
+      <div id="categoryButtons" class="space-x-4 flex flex-wrap justify-center gap-y-3">
         <button
           data-category="all"
-          class="px-3 py-1 bg-purple-100 text-purple-700 rounded font-semibold"
+          class="category-button px-6 py-3 bg-berryRed text-white rounded-full font-semibold shadow-md hover:bg-chocolateDark transition duration-300 active"
         >
-          All
+          All Varieties
         </button>
         <button
           data-category="dark"
-          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+          class="category-button px-6 py-3 bg-gray-200 text-chocolateDark rounded-full font-semibold shadow-md hover:bg-gray-300 transition duration-300"
         >
-          Dark
+          Dark Chocolates
         </button>
         <button
           data-category="milk"
-          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+          class="category-button px-6 py-3 bg-gray-200 text-chocolateDark rounded-full font-semibold shadow-md hover:bg-gray-300 transition duration-300"
         >
-          Milk
+          Milk Chocolates
         </button>
         <button
           data-category="truffles"
-          class="px-3 py-1 bg-gray-100 text-gray-700 rounded"
+          class="category-button px-6 py-3 bg-gray-200 text-chocolateDark rounded-full font-semibold shadow-md hover:bg-gray-300 transition duration-300"
         >
-          Truffles
+          Artisan Truffles
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Product Listing -->
   <section
     id="products"
-    class="container mx-auto px-4 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+    class="container mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12"
   >
-    <!-- Products inserted via JavaScript -->
-  </section>
+    </section>
 
-  <!-- Newsletter -->
-  <section class="bg-purple-700 py-10 text-white text-center">
-    <h3 class="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h3>
-    <p class="mb-4">Get the latest updates and offers directly in your inbox.</p>
-    <form class="flex justify-center gap-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscribed!');">
+  <section class="bg-chocolateDark py-20 text-creamyWhite text-center">
+    <h3 class="text-4xl font-bold font-display mb-6">
+      Unlock Sweet Deals and Updates!
+    </h3>
+    <p class="mb-8 text-xl max-w-2xl mx-auto">
+      Join our exclusive newsletter to receive irresistible offers, tantalizing new product alerts, and delightful chocolate tips directly in your inbox.
+    </p>
+    <form class="flex justify-center gap-4 max-w-lg mx-auto px-6" onsubmit="event.preventDefault(); alert('Thank you for subscribing to our delightful newsletter!');">
       <input
         type="email"
-        placeholder="Enter your email"
-        class="px-4 py-2 rounded w-2/3 text-black"
+        placeholder="Enter your email address"
+        class="px-6 py-3 rounded-lg w-2/3 text-chocolateDark placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-goldenCaramel"
         required
       />
       <button
-        class="bg-white text-purple-700 px-4 py-2 rounded font-semibold"
+        class="bg-goldenCaramel text-chocolateDark px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-creamyWhite hover:text-chocolateDark transition duration-300 transform hover:scale-105"
         type="submit"
       >
-        Subscribe
+        Subscribe Now
       </button>
     </form>
   </section>
 
-  <!-- Cart Sidebar -->
+  <footer class="bg-gray-100 py-10 text-center text-gray-600">
+    <p class="text-lg">&copy; 2025 The Chocolate Shop. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 mt-5">
+      <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Privacy Policy</a>
+      <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Terms of Service</a>
+    </div>
+  </footer>
+
   <aside
     id="cartSidebar"
-    class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg p-4 overflow-y-auto transform translate-x-full transition-transform z-50 flex flex-col"
+    class="fixed top-0 right-0 h-full w-96 bg-creamyWhite shadow-2xl p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col"
   >
-    <h2 class="text-xl font-bold mb-4 text-purple-700">Your Cart</h2>
-    <ul id="cartItems" class="space-y-4 flex-grow overflow-auto"></ul>
-    <div class="mt-6 font-semibold text-lg" id="cartTotal">Total: Rs.0</div>
+    <div class="flex justify-between items-center mb-8 pb-4 border-b border-gray-200">
+      <h2 class="text-3xl font-bold text-berryRed font-display">Your Sweet Cart</h2>
+      <button
+        id="closeCartBtn"
+        class="text-chocolateDark text-4xl leading-none hover:text-berryRed transition duration-300"
+      >
+        &times;
+      </button>
+    </div>
+    <ul id="cartItems" class="space-y-6 flex-grow overflow-auto border-b border-gray-200 py-6"></ul>
+    <div class="mt-8 font-semibold text-2xl text-right text-chocolateDark" id="cartTotal">Total: Rs.0</div>
     <button
       id="proceedCheckoutBtn"
-      class="mt-4 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+      class="mt-6 w-full bg-goldenCaramel text-chocolateDark py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-berryRed hover:text-creamyWhite transition duration-300 transform hover:scale-105"
       title="Proceed to Checkout"
     >
       Proceed to Checkout
     </button>
-    <button
-      id="closeCartBtn"
-      class="mt-2 w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition"
-    >
-      Close Cart
-    </button>
   </aside>
 
-  <!-- Cart Toggle Button -->
   <button
     id="cartToggleBtn"
-    class="fixed bottom-6 right-6 bg-purple-700 text-white px-5 py-3 rounded-full shadow-lg hover:bg-purple-800 transition z-50"
+    class="fixed bottom-8 right-8 bg-berryRed text-creamyWhite px-7 py-4 rounded-full shadow-xl hover:bg-chocolateDark transition duration-300 transform hover:scale-105 z-50 text-2xl font-semibold flex items-center space-x-3"
     title="Toggle Cart"
   >
-    🛒 Cart (<span id="cartCount">0</span>)
+    <span>🛒</span> <span>Cart (<span id="cartCount">0</span>)</span>
   </button>
 
   <script>
     const products = [
       {
         id: 1,
-        name: "Dark Chocolate",
+        name: "Dark Chocolate Supreme",
         category: "dark",
         price: 799,
         rating: 4,
-        image:
-          "https://t3.ftcdn.net/jpg/02/42/11/72/360_F_242117284_FyhQaHVNf76gqsNHNM54I0kTRxcC2Dl8.jpg",
+        image: "https://t3.ftcdn.net/jpg/02/42/11/72/360_F_242117284_FyhQaHVNf76gqsNHNM54I0kTRxcC2Dl8.jpg",
       },
       {
         id: 2,
-        name: "Belgium Truffles",
+        name: "Belgium Truffle Delights",
         category: "truffles",
         price: 1200,
         rating: 5,
-        image:
-          "https://media.istockphoto.com/id/911742664/photo/handmade-dark-chocolates-iii.jpg?s=612x612&w=0&k=20&c=M6O9YhcQSgE0fVuzaYYtp8-KF-aG8ltMj_sSefTGAb0=",
+        image: "https://static.wixstatic.com/media/8c0f2e_89eead42358d4227b22d27038f20ecf8~mv2.jpg/v1/fill/w_603,h_1080,al_c,q_85,enc_avif,quality_auto/8c0f2e_89eead42358d4227b22d27038f20ecf8~mv2.jpg",
       },
       {
         id: 3,
-        name: "Kisses Chocolate",
+        name: "Silky Kisses Milk Chocolate",
         category: "milk",
         price: 1550,
         rating: 3,
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxvcU_1mYf1Mm-yVF83rKpVfq1TTPjL4WrQ&s",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxvcU_1mYf1Mm-yVF83rKpVfq1TTPjL4WrQ&s",
       },
       {
         id: 4,
-        name: "Milk Chocolate Bar",
+        name: "Classic Milk Chocolate Bar",
         category: "milk",
         price: 699,
         rating: 4,
-        image:
-          "https://cdn.pixabay.com/photo/2017/01/20/00/30/chocolate-1991344_1280.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAqQXqZLQLbAIkVxTyKPxCOYfsWv-w-Zj3vA&s",
       },
       {
         id: 5,
-        name: "Hazelnut Dark Chocolate",
+        name: "Hazelnut Dark Dream",
         category: "dark",
         price: 950,
         rating: 5,
-        image:
-          "https://cdn.pixabay.com/photo/2017/02/28/21/48/dark-chocolate-2109906_1280.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtSWH1hPlcwQA79nhmpLIr6zvvl9sHY53AwQ&s",
       },
       {
         id: 6,
-        name: "White Chocolate Truffles",
+        name: "Elegant White Truffles",
         category: "truffles",
         price: 1300,
         rating: 4,
-        image:
-          "https://cdn.pixabay.com/photo/2016/03/27/07/08/chocolates-1289658_1280.jpg",
+        image: "https://www.sugarhero.com/wp-content/uploads/2020/12/champagne-white-chocolate-truffles-FEATURED-IMAGE.jpg",
       },
       {
         id: 7,
-        name: "Caramel Milk Chocolate",
+        name: "Salted Caramel Milk Delight",
         category: "milk",
         price: 850,
         rating: 4,
-        image:
-          "https://cdn.pixabay.com/photo/2014/12/03/21/26/chocolate-555034_1280.jpg",
+        image: "https://static.wixstatic.com/media/10d1e0_7630cfce012340869fde4b6202f9ba87~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
       },
       {
         id: 8,
-        name: "Mint Dark Chocolate",
+        name: "Refreshing Mint Dark Bar",
         category: "dark",
         price: 880,
         rating: 3,
-        image:
-          "https://cdn.pixabay.com/photo/2017/01/31/15/29/mint-2027692_1280.jpg",
+        image: "https://m.media-amazon.com/images/I/81FGdTjXmbL._AC_UF1000,1000_QL80_.jpg",
       },
       {
         id: 9,
-        name: "Truffle Gift Box",
+        name: "Assorted Truffle Gift Box",
         category: "truffles",
         price: 2100,
         rating: 5,
-        image:
-          "https://cdn.pixabay.com/photo/2016/11/18/15/41/chocolate-1836103_1280.jpg",
+        image: "https://m.media-amazon.com/images/I/718bCHZSuXL.jpg",
       },
     ];
   
@@ -263,54 +307,34 @@
     const loginLogoutLink = document.getElementById("loginLogoutLink");
     const proceedCheckoutBtn = document.getElementById("proceedCheckoutBtn");
   
-    let user = null;
-    let cart = [];
+    // --- Frontend-only Cart Management ---
+    let cart = JSON.parse(localStorage.getItem('chocolateCart')) || []; // Load cart from local storage
+    // --- END Frontend-only Cart Management ---
   
-    // Fetch logged-in user info from server
-    async function fetchUser() {
-      try {
-        const res = await fetch("/me", { credentials: "include" });
-        if (res.ok) {
-          user = await res.json();
-        } else {
-          user = null;
-        }
-      } catch (e) {
-        user = null;
-      }
-      updateLoginLogoutLink();
+    // Function to get current login status from localStorage
+    function getLoginStatus() {
+      return localStorage.getItem('isLoggedIn') === 'true';
     }
-  
+
     // Update login/logout link in header
     function updateLoginLogoutLink() {
-      if (user) {
+      if (getLoginStatus()) { // Check current status
         loginLogoutLink.textContent = "Logout";
-        loginLogoutLink.href = "#";
-        loginLogoutLink.onclick = async (e) => {
+        loginLogoutLink.href = "#"; // Prevent navigation
+        loginLogoutLink.onclick = (e) => {
           e.preventDefault();
-          try {
-            const res = await fetch("/logout", {
-              method: "POST",
-              credentials: "include",
-            });
-            if (res.ok) {
-              user = null;
-              alert("Logged out successfully");
-              updateLoginLogoutLink();
-              cart = [];
-              renderCart();
-              window.location.href = "/login.html";
-            } else {
-              alert("Logout failed");
-            }
-          } catch {
-            alert("Logout failed");
-          }
+          localStorage.removeItem('isLoggedIn'); // Simulate logout
+          alert("Logged out successfully");
+          updateLoginLogoutLink(); // Update link immediately
+          cart = []; // Clear cart on logout
+          localStorage.removeItem('chocolateCart'); // Clear cart from local storage
+          renderCart();
+          window.location.href = "/login.html"; // Redirect to login page
         };
       } else {
         loginLogoutLink.textContent = "Login";
         loginLogoutLink.href = "/login.html";
-        loginLogoutLink.onclick = null;
+        loginLogoutLink.onclick = null; // Remove handler if not logged in
       }
     }
   
@@ -318,7 +342,7 @@
     function renderStars(rating) {
       let stars = "";
       for (let i = 0; i < 5; i++) {
-        stars += i < rating ? "&#9733;" : "&#9734;";
+        stars += `<span class="text-goldenCaramel">${i < rating ? "&#9733;" : "&#9734;"}</span>`;
       }
       return stars;
     }
@@ -334,22 +358,27 @@
         return matchesCategory && matchesSearch;
       });
   
+      if (filtered.length === 0) {
+        productContainer.innerHTML = '<p class="col-span-full text-center text-xl text-gray-600 py-10">No chocolates found matching your criteria. Try a different search or category!</p>';
+        return;
+      }
+
       filtered.forEach((product) => {
         const div = document.createElement("div");
         div.className =
-          "bg-white rounded-lg shadow-md p-4 flex flex-col items-center";
+          "product-card bg-white rounded-lg shadow-subtle p-6 flex flex-col items-center border border-gray-100";
   
         div.innerHTML = `
           <img
             src="${product.image}"
             alt="${product.name}"
-            class="h-48 w-full object-cover rounded"
+            class="h-56 w-full object-cover rounded-lg mb-5 transform transition duration-300 hover:scale-105"
           />
-          <h3 class="mt-4 font-semibold text-lg">${product.name}</h3>
-          <div class="text-yellow-400 text-lg">${renderStars(product.rating)}</div>
-          <p class="mt-2 text-purple-700 font-bold text-xl">Rs.${product.price}</p>
+          <h3 class="font-bold text-xl text-chocolateDark font-display mb-2 text-center">${product.name}</h3>
+          <div class="text-lg mb-3">${renderStars(product.rating)}</div>
+          <p class="text-berryRed font-bold text-2xl mb-5">Rs.${product.price}</p>
           <button
-            class="mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-900 transition addToCartBtn"
+            class="mt-auto w-full bg-chocolateLight text-creamyWhite px-6 py-3 rounded-full text-lg font-semibold hover:bg-berryRed transition duration-300 addToCartBtn"
             data-id="${product.id}"
           >
             Add to Cart
@@ -361,121 +390,80 @@
   
       // Bind Add to Cart buttons
       document.querySelectorAll(".addToCartBtn").forEach((btn) =>
-        btn.addEventListener("click", async () => {
-          if (!user) {
+        btn.addEventListener("click", () => {
+          if (!getLoginStatus()) { // Check getLoginStatus() directly here
             alert("Please login to add items to your cart.");
-            window.location.href = "/login.html";
+            window.location.href = "/login.html"; // Redirect to login page
             return;
           }
           const productId = parseInt(btn.getAttribute("data-id"));
-          await addToCart(productId);
+          addToCart(productId);
         })
       );
     }
   
-    // Add to cart - send request to server or update local state (demo fallback)
-    async function addToCart(productId) {
-  try {
-    const res = await fetch("/cart/add", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-      body: JSON.stringify({ productId }),
-    });
-    if (res.ok) {
-      await loadCart();
-      renderCart();
-      alert("Added to cart!");
-    } else {
-      const errorText = await res.text();
-      console.error("Add to cart error:", res.status, errorText);
-      alert("Failed to add to cart: " + errorText);
-    }
-  } catch (err) {
-    console.error("Add to cart exception:", err);
-    alert("Failed to add to cart (network error)");
-  }
-}
-
-  
-    // Remove from cart
-    async function removeFromCart(productId) {
-      try {
-        const res = await fetch("/cart/remove", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ productId }),
-        });
-        if (res.ok) {
-          await loadCart();
-          renderCart();
+    // Add to cart (Frontend-only)
+    function addToCart(productId) {
+      const product = products.find((p) => p.id === productId);
+      if (product) {
+        const existingItem = cart.find((item) => item.id === productId);
+        if (existingItem) {
+          existingItem.quantity++;
         } else {
-          alert("Failed to remove from cart");
+          cart.push({ ...product, quantity: 1 });
         }
-      } catch {
-        alert("Failed to remove from cart");
-      }
-    }
-  
-    // Change quantity in cart
-    async function changeQuantity(productId, amount) {
-      try {
-        const res = await fetch("/cart/change", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ productId, amount }),
-        });
-        if (res.ok) {
-          await loadCart();
-          renderCart();
-        } else {
-          alert("Failed to update quantity");
-        }
-      } catch {
-        alert("Failed to update quantity");
-      }
-    }
-  
-    // Load cart from server
-    async function loadCart() {
-      if (!user) {
-        cart = [];
+        localStorage.setItem('chocolateCart', JSON.stringify(cart)); // Save to local storage
         renderCart();
-        return;
+        alert(`'${product.name}' added to cart!`);
       }
-      try {
-        const res = await fetch("/cart", { credentials: "include" });
-        if (res.ok) {
-          cart = await res.json();
-        } else {
-          cart = [];
+    }
+  
+    // Remove from cart (Frontend-only)
+    function removeFromCart(productId) {
+      cart = cart.filter((item) => item.id !== productId);
+      localStorage.setItem('chocolateCart', JSON.stringify(cart)); // Save to local storage
+      renderCart();
+    }
+  
+    // Change quantity in cart (Frontend-only)
+    function changeQuantity(productId, amount) {
+      const item = cart.find((item) => item.id === productId);
+      if (item) {
+        item.quantity += amount;
+        if (item.quantity <= 0) {
+          removeFromCart(productId); // Remove if quantity drops to 0 or less
         }
-      } catch {
-        cart = [];
       }
+      localStorage.setItem('chocolateCart', JSON.stringify(cart)); // Save to local storage
+      renderCart();
+    }
+  
+    // Load cart from local storage (Frontend-only)
+    function loadCart() {
+      // Cart is already loaded at the top from localStorage
+      // This function exists for consistency with original structure
     }
   
     // Render cart items in sidebar
     function renderCart() {
       cartItemsList.innerHTML = "";
       if (cart.length === 0) {
-        cartItemsList.innerHTML = "<p>Your cart is empty.</p>";
+        cartItemsList.innerHTML = "<p class='text-center text-gray-500 mt-4'>Your cart is empty. Add some sweet treats!</p>";
       } else {
         cart.forEach((item) => {
           const li = document.createElement("li");
-          li.className = "flex items-center space-x-3";
+          li.className = "flex items-center space-x-4 p-3 bg-white rounded-lg shadow-sm border border-gray-100";
   
           li.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded" />
+            <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-md flex-shrink-0" />
             <div class="flex-grow">
-              <h4 class="font-semibold">${item.name}</h4>
-              <p>Rs.${item.price} x ${item.quantity}</p>
-              <div class="flex space-x-2 mt-1">
-                <button class="px-2 bg-gray-200 rounded" data-action="decrease" data-id="${item.id}">-</button>
-                <button class="px-2 bg-gray-200 rounded" data-action="increase" data-id="${item.id}">+</button>
-                <button class="px-2 bg-red-400 text-white rounded" data-action="remove" data-id="${item.id}">Remove</button>
+              <h4 class="font-bold text-lg text-chocolateDark">${item.name}</h4>
+              <p class="text-md text-chocolateLight">Rs.${item.price} x ${item.quantity}</p>
+              <div class="flex items-center space-x-2 mt-2">
+                <button class="px-3 py-1 bg-chocolateLight text-creamyWhite rounded-full hover:bg-berryRed transition" data-action="decrease" data-id="${item.id}">-</button>
+                <span class="text-chocolateDark font-semibold text-lg">${item.quantity}</span>
+                <button class="px-3 py-1 bg-chocolateLight text-creamyWhite rounded-full hover:bg-berryRed transition" data-action="increase" data-id="${item.id}">+</button>
+                <button class="px-3 py-1 bg-red-500 text-white rounded-full ml-auto hover:bg-red-700 transition" data-action="remove" data-id="${item.id}">Remove</button>
               </div>
             </div>
           `;
@@ -487,10 +475,10 @@
         cartItemsList.querySelectorAll("button").forEach((btn) => {
           const id = parseInt(btn.getAttribute("data-id"));
           const action = btn.getAttribute("data-action");
-          btn.onclick = async () => {
-            if (action === "increase") await changeQuantity(id, 1);
-            else if (action === "decrease") await changeQuantity(id, -1);
-            else if (action === "remove") await removeFromCart(id);
+          btn.onclick = () => {
+            if (action === "increase") changeQuantity(id, 1);
+            else if (action === "decrease") changeQuantity(id, -1);
+            else if (action === "remove") removeFromCart(id);
           };
         });
       }
@@ -502,13 +490,8 @@
   
     // Event listeners
     cartToggleBtn.addEventListener("click", () => {
-      if (cartSidebar.classList.contains("translate-x-full")) {
-        cartSidebar.classList.remove("translate-x-full");
-        cartSidebar.classList.add("translate-x-0");
-      } else {
-        cartSidebar.classList.add("translate-x-full");
-        cartSidebar.classList.remove("translate-x-0");
-      }
+      cartSidebar.classList.toggle("translate-x-full");
+      cartSidebar.classList.toggle("translate-x-0");
     });
   
     closeCartBtn.addEventListener("click", () => {
@@ -517,6 +500,7 @@
     });
   
     // Search input
+    let currentCategory = "all"; // Initialize currentCategory here
     searchInput.addEventListener("input", (e) => {
       renderProducts(
         currentCategory,
@@ -525,40 +509,41 @@
     });
   
     // Category buttons (event delegation)
-    let currentCategory = "all";
     categoryButtons.addEventListener("click", (e) => {
       if (e.target.tagName === "BUTTON") {
         currentCategory = e.target.getAttribute("data-category");
         renderProducts(currentCategory, searchInput.value.trim());
   
         // Highlight active button
-        [...categoryButtons.children].forEach((btn) =>
-          btn.classList.remove("bg-purple-900")
-        );
-        e.target.classList.add("bg-purple-900");
+        [...categoryButtons.children].forEach((btn) => {
+          btn.classList.remove("active", "bg-berryRed", "text-white");
+          btn.classList.add("bg-gray-200", "text-chocolateDark");
+        });
+        e.target.classList.add("active", "bg-berryRed", "text-white");
+        e.target.classList.remove("bg-gray-200", "text-chocolateDark");
       }
     });
   
     // Checkout button
     proceedCheckoutBtn.addEventListener("click", () => {
-      if (!user) {
+      if (!getLoginStatus()) { // Check getLoginStatus() directly here
         alert("Please login to proceed to checkout.");
         window.location.href = "/login.html";
         return;
       }
       if (cart.length === 0) {
-        alert("Your cart is empty.");
+        alert("Your cart is empty. Add some chocolates before checking out!");
         return;
       }
-      window.location.href = "/checkout.html";
+      alert("Proceeding to checkout with current cart items!");
     });
   
     // Initialize
     (async () => {
-      await fetchUser();
-      await loadCart();
-      renderProducts();
-      renderCart();
+      updateLoginLogoutLink(); // Call this directly to ensure it reflects current localStorage state
+      loadCart(); // Load cart from local storage
+      renderProducts(); // Render initial products
+      renderCart(); // Render initial cart
     })();
   </script>
   
