@@ -3,65 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - The Chocolate Shop</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - Sweet Treats</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                        display: ["Playfair Display", "serif"],
+                        serif: ["Merriweather", "serif"], 
+                    },
+                    colors: {
+                        chocolateDark: '#3A201A', 
+                        chocolateLight: '#6F4E37', 
+                        creamyWhite: '#FFF8E1', 
+                        berryRed: '#A30000', 
+                        goldenCaramel: '#D4AF37', 
+                    },
+                    boxShadow: {
+                        'deep': '0 15px 30px rgba(0, 0, 0, 0.25)',
+                        'subtle': '0 4px 10px rgba(0, 0, 0, 0.08)',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-creamyWhite text-chocolateDark font-sans">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-purple-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">The Chocolate Shop</h1>
-            <ul class="flex space-x-4">
-                <li><a href="home.html" class="hover:underline">Home</a></li>
-                <li><a href="about.html" class="hover:underline">About Us</a></li>
-                <li><a href="contactus.html" class="hover:underline">Contact</a></li>
-            </ul>
+    <header class="sticky top-0 z-50 bg-chocolateDark text-creamyWhite shadow-deep">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="flex items-center space-x-3">
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+                    alt="Chocolate Logo"
+                    class="w-10 h-10 transform rotate-[-5deg]"
+                />
+                <h1 class="text-3xl font-bold font-display tracking-wide">Sweet Treats</h1>
+            </div>
+            <nav class="space-x-8 text-lg font-semibold hidden md:flex">
+                <a href="home.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Home</a>
+                <a href="about.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">About Us</a>
+                <a href="contactus.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Contact</a>
+                <a href="login.html" id="loginLogoutLink" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Login</a>
+            </nav>
+            <button class="md:hidden text-creamyWhite text-3xl">
+                &#9776; </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Contact Section -->
-    <div class="container mt-5">
-        <h2 class="text-center fw-bold">Contact Us</h2>
-        <p class="text-center">Swing by for a cup of coffee, or leave us a message:</p>
+    <section class="bg-chocolateLight text-creamyWhite py-20 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold font-display mb-4">Get in Touch with Sweet Treats</h2>
+            <p class="text-xl max-w-3xl mx-auto">
+                We'd love to hear from you! Whether it's a question about our chocolates, a custom order, or just to say hello, our team is ready to assist.
+            </p>
+        </div>
+    </section>
 
-        <div class="row mt-4">
-            <!-- Left Side: Image -->
-            <div class="col-md-6">
-                <img src="https://via.placeholder.com/500x300" class="img-fluid rounded" alt="Contact Image">
+    <section class="container mx-auto py-16 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-3xl font-bold font-display text-berryRed mb-4">Visit Our Store</h3>
+                    <p class="text-lg text-gray-700">
+                        123 Chocolate Lane,<br>
+                        Sweetville, Cocoa County,<br>
+                        India 12345
+                    </p>
+                    <p class="text-lg text-gray-700 mt-4">
+                        <strong class="text-chocolateDark">Hours:</strong> Mon - Sat: 10 AM - 7 PM, Sun: 11 AM - 5 PM
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-3xl font-bold font-display text-berryRed mb-4">Reach Us Directly</h3>
+                    <p class="text-lg text-gray-700">
+                        <strong class="text-chocolateDark">Phone:</strong> +91 98765 43210
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        <strong class="text-chocolateDark">Email:</strong> info@sweettreats.com
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold font-display text-berryRed mb-4">Find Us on the Map</h3>
+                    <div class="w-full h-80 bg-gray-200 rounded-lg shadow-md flex items-center justify-center text-gray-500 text-center">
+                        <p>Google Maps Embed Placeholder<br>(Replace with actual map iframe)</p>
+                        </div>
+                </div>
             </div>
 
-            <!-- Right Side: Form -->
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="Your name..">
+            <div class="bg-white p-8 rounded-lg shadow-deep border border-gray-100">
+                <h3 class="text-3xl font-bold font-display text-center text-chocolateDark mb-8">Send Us a Message</h3>
+                <form class="space-y-6">
+                    <div>
+                        <label for="firstName" class="block text-lg font-semibold text-gray-700 mb-2">First Name</label>
+                        <input type="text" id="firstName" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-transparent text-lg" placeholder="Your name..">
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Your last name..">
+                    <div>
+                        <label for="lastName" class="block text-lg font-semibold text-gray-700 mb-2">Last Name</label>
+                        <input type="text" id="lastName" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-transparent text-lg" placeholder="Your last name..">
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Country</label>
-                        <select class="form-select">
-                            <option>India</option>
-                            <option>USA</option>
-                            <option>UK</option>
-                            <option>Australia</option>
-                        </select>
+                    <div>
+                        <label for="email" class="block text-lg font-semibold text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-transparent text-lg" placeholder="Your email.." required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Subject</label>
-                        <textarea class="form-control" rows="4" placeholder="Write something.."></textarea>
+                    <div>
+                        <label for="country" class="block text-lg font-semibold text-gray-700 mb-2">Country</label>
+                        <select id="country" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-transparent text-lg">
+                            <option value="">Select your country</option>
+                            <option value="IN">India</option>
+                            <option value="US">USA</option>
+                            <option value="GB">UK</option>
+                            <option value="AU">Australia</option>
+                            </select>
                     </div>
-                    <button type="submit" class="btn btn-dark">Send Message</button>
+                    <div>
+                        <label for="subject" class="block text-lg font-semibold text-gray-700 mb-2">Subject</label>
+                        <textarea id="subject" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolateLight focus:border-transparent text-lg resize-y" placeholder="Write your message here.."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-berryRed text-creamyWhite py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-chocolateDark transition duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
+    <footer class="bg-gray-100 py-10 text-center text-gray-600">
+        <p class="text-lg">&copy; 2025 Sweet Treats. All rights reserved.</p>
+        <div class="flex justify-center space-x-6 mt-5">
+            <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Privacy Policy</a>
+            <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        // This script block is for the login/logout functionality in the header,
+        // ensuring it behaves consistently across all pages.
+        const loginLogoutLink = document.getElementById("loginLogoutLink");
+
+        function getLoginStatus() {
+            return localStorage.getItem('isLoggedIn') === 'true';
+        }
+
+        function updateLoginLogoutLink() {
+            if (getLoginStatus()) {
+                loginLogoutLink.textContent = "Logout";
+                loginLogoutLink.href = "#"; 
+                loginLogoutLink.onclick = (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('isLoggedIn'); // Simulate logout
+                    alert("Logged out successfully");
+                    updateLoginLogoutLink(); // Update link immediately
+                    window.location.href = "/login.html"; // Redirect to login page
+                };
+            } else {
+                loginLogoutLink.textContent = "Login";
+                loginLogoutLink.href = "/login.html";
+                loginLogoutLink.onclick = null; // Remove handler if not logged in
+            }
+        }
+
+        // Initialize the login/logout link on page load
+        updateLoginLogoutLink();
+    </script>
 </body>
 </html>
