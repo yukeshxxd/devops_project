@@ -1,63 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Sweet Treats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "sans-serif"],
+            display: ["Playfair Display", "serif"],
+            serif: ["Merriweather", "serif"], 
+          },
+          colors: {
+            chocolateDark: '#3A201A', 
+            chocolateLight: '#6F4E37', 
+            creamyWhite: '#FFF8E1', 
+            berryRed: '#A30000', 
+            goldenCaramel: '#D4AF37', 
+          },
+          boxShadow: {
+            'deep': '0 15px 30px rgba(0, 0, 0, 0.25)',
+            'subtle': '0 4px 10px rgba(0, 0, 0, 0.08)',
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
     
+    /* Team card hover effect */
+    .team-card {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+  </style>
 </head>
-<body>
-    <nav class="bg-purple-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">The Chocolate Shop</h1>
-            <ul class="flex space-x-4">
-                <li><a href="home.html" class="hover:underline">Home</a></li>
-                <li><a href="about.html" class="hover:underline">About Us</a></li>
-                <li><a href="contactus.html" class="hover:underline">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Our Team</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card team-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTU2fQ_VCPdrSaseCDEo_dTbhRo7_Kuoz5zQ&s" class="card-img-top" alt="She">
-                    <div class="card-body text-center">
-                        <h5 class="card-title"><strong>She</strong></h5>
-                        <p class="text-muted">CEO & Founder</p>
-                        <p>Our respected CEO of the company.</p>
-                        <a href="#" class="btn btn-outline-dark">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card team-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTU2fQ_VCPdrSaseCDEo_dTbhRo7_Kuoz5zQ&s" class="card-img-top" alt="He">
-                    <div class="card-body text-center">
-                        <h5 class="card-title"><strong>He</strong></h5>
-                        <p class="text-muted">Art Director</p>
-                        <p>Art director of the company</p>
-                        <a href="#" class="btn btn-outline-dark">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card team-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTU2fQ_VCPdrSaseCDEo_dTbhRo7_Kuoz5zQ&s" class="card-img-top" alt="Her">
-                    <div class="card-body text-center">
-                        <h5 class="card-title"><strong>Her</strong></h5>
-                        <p class="text-muted">Designer</p>
-                        <p>Designer of the company</p>
-                        <a href="#" class="btn btn-outline-dark">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="bg-creamyWhite text-chocolateDark font-sans">
 
+  <header class="sticky top-0 z-50 bg-chocolateDark text-creamyWhite shadow-deep">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+          alt="Chocolate Logo"
+          class="w-10 h-10 transform rotate-[-5deg]"
+        />
+        <h1 class="text-3xl font-bold font-display tracking-wide">Sweet Treats</h1>
+      </div>
+      <nav class="space-x-8 text-lg font-semibold hidden md:flex">
+        <a href="home.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Home</a>
+        <a href="about.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">About</a>
+        <a href="contactus.html" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Contact</a>
+        <a href="login.html" id="loginLogoutLink" class="hover:text-goldenCaramel transition duration-300 transform hover:scale-105">Login</a>
+      </nav>
+      <button class="md:hidden text-creamyWhite text-3xl">
+        &#9776; </button>
+    </div>
+  </header>
+
+  <section class="bg-chocolateLight text-creamyWhite py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl font-bold font-display mb-4">Our Story, Our Passion</h2>
+      <p class="text-xl max-w-3xl mx-auto">
+        Crafting exquisite chocolates is more than just a business for us; it's a journey of joy, flavor, and dedication.
+      </p>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-16 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-4xl font-bold font-display text-berryRed mb-6">Our Mission</h3>
+        <p class="text-lg leading-relaxed">
+          At Sweet Treats, our mission is to bring moments of pure delight to your life through the art of chocolate making. We are committed to sourcing the finest cocoa beans, using sustainable practices, and creating unique flavor experiences that linger long after the last bite.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold font-display text-berryRed mb-6">Our Values</h3>
+        <ul class="space-y-4 text-lg">
+          <li class="flex items-center">
+            <span class="text-goldenCaramel text-2xl mr-3">&#9733;</span>
+            <strong>Quality Excellence:</strong> Uncompromising standards in every creation.
+          </li>
+          <li class="flex items-center">
+            <span class="text-goldenCaramel text-2xl mr-3">&#9733;</span>
+            <strong>Artisan Craftsmanship:</strong> Hand-made with passion and precision.
+          </li>
+          <li class="flex items-center">
+            <span class="text-goldenCaramel text-2xl mr-3">&#9733;</span>
+            <strong>Sustainable Sourcing:</strong> Responsible practices from farm to bar.
+          </li>
+          <li class="flex items-center">
+            <span class="text-goldenCaramel text-2xl mr-3">&#9733;</span>
+            <strong>Customer Joy:</strong> Your happiness is our sweetest reward.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-16 px-6">
+    <h2 class="text-5xl font-bold font-display text-center mb-12">Meet Our Makers</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="team-card bg-white rounded-lg shadow-subtle p-6 flex flex-col items-center border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             class="w-40 h-40 object-cover rounded-full mb-6 border-4 border-goldenCaramel shadow-md" 
+             alt="Founder Image" />
+        <h3 class="font-bold text-2xl font-display text-chocolateDark mb-1">Jane Doe</h3>
+        <p class="text-berryRed font-semibold mb-3">CEO & Master Chocolatier</p>
+        <p class="text-center text-gray-700 leading-relaxed mb-4">
+          With a lifelong passion for cocoa, Jane founded Sweet Treats with a vision to share truly exceptional chocolate experiences. Her expertise in flavor pairing and bean selection is unmatched.
+        </p>
+        <a href="mailto:jane@example.com" class="inline-block bg-chocolateLight text-creamyWhite px-6 py-3 rounded-full text-lg font-semibold hover:bg-berryRed transition duration-300">Contact Jane</a>
+      </div>
+
+      <div class="team-card bg-white rounded-lg shadow-subtle p-6 flex flex-col items-center border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             class="w-40 h-40 object-cover rounded-full mb-6 border-4 border-goldenCaramel shadow-md" 
+             alt="Art Director Image" />
+        <h3 class="font-bold text-2xl font-display text-chocolateDark mb-1">Mark Johnson</h3>
+        <p class="text-berryRed font-semibold mb-3">Art Director & Packaging Designer</p>
+        <p class="text-center text-gray-700 leading-relaxed mb-4">
+          Mark brings a keen artistic eye to every aspect of our brand, ensuring that each Sweet Treats product is not just a delight to taste, but also a feast for the eyes.
+        </p>
+        <a href="mailto:mark@example.com" class="inline-block bg-chocolateLight text-creamyWhite px-6 py-3 rounded-full text-lg font-semibold hover:bg-berryRed transition duration-300">Contact Mark</a>
+      </div>
+
+      <div class="team-card bg-white rounded-lg shadow-subtle p-6 flex flex-col items-center border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1544725068-45a704443916?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             class="w-40 h-40 object-cover rounded-full mb-6 border-4 border-goldenCaramel shadow-md" 
+             alt="Marketing Lead Image" />
+        <h3 class="font-bold text-2xl font-display text-chocolateDark mb-1">Sarah Lee</h3>
+        <p class="text-berryRed font-semibold mb-3">Head of Customer Experience</p>
+        <p class="text-center text-gray-700 leading-relaxed mb-4">
+          Sarah is dedicated to ensuring every customer interaction is as sweet as our chocolates. She manages our community engagement and ensures your satisfaction.
+        </p>
+        <a href="mailto:sarah@example.com" class="inline-block bg-chocolateLight text-creamyWhite px-6 py-3 rounded-full text-lg font-semibold hover:bg-berryRed transition duration-300">Contact Sarah</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 py-10 text-center text-gray-600">
+    <p class="text-lg">&copy; 2025 Sweet Treats. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 mt-5">
+      <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Privacy Policy</a>
+      <a href="#" class="hover:text-chocolateDark transition duration-300 text-lg">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    // This script block is for the login/logout functionality in the header,
+    // assuming it will be included in all pages from your home.html script.
+    // You might want to move this into a separate shared JS file or keep it
+    // in each HTML file if you prefer.
+
+    const loginLogoutLink = document.getElementById("loginLogoutLink");
+
+    function getLoginStatus() {
+      return localStorage.getItem('isLoggedIn') === 'true';
+    }
+
+    function updateLoginLogoutLink() {
+      if (getLoginStatus()) {
+        loginLogoutLink.textContent = "Logout";
+        loginLogoutLink.href = "#"; 
+        loginLogoutLink.onclick = (e) => {
+          e.preventDefault();
+          localStorage.removeItem('isLoggedIn');
+          alert("Logged out successfully");
+          updateLoginLogoutLink();
+          window.location.href = "/login.html"; // Redirect to login page after logout
+        };
+      } else {
+        loginLogoutLink.textContent = "Login";
+        loginLogoutLink.href = "/login.html";
+        loginLogoutLink.onclick = null;
+      }
+    }
+
+    // Initialize the login/logout link on page load
+    updateLoginLogoutLink();
+  </script>
 </body>
 </html>
